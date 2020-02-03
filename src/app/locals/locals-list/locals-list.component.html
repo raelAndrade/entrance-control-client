@@ -1,0 +1,34 @@
+<div id="wrapper">
+
+  <app-navbar></app-navbar>
+
+  <div id="page-wrapper">
+
+    <br /><br /><br />
+
+    <div class="float-right">
+      <a href="locals/novo" class="btn btn-primary">Novo Local</a>
+    </div>
+    <br /><br />
+    <p-table [value]="locals">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Código</th>
+          <th>Local</th>
+          <th>Administração</th>
+          <th>Igreja</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-local>
+        <tr>
+          <td>{{local.id}}</td>
+          <td>{{local.description}}</td>
+          <td>{{local.administrations[0].name}}</td>
+          <td>{{local.administrations[0].churches[0].description}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>
+
+<app-footer></app-footer>

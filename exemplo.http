@@ -1,0 +1,11 @@
+http://localhost:3000/locals
+
+###
+
+POST http://localhost:3000/locals HTTP/1.1
+content-type: application/json
+
+{
+    "name" : "Reunião Geral de Admistradores",
+    "description" : "Reunião de adminstradores"
+}

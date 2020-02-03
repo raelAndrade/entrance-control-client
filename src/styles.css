@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import '~bootstrap/dist/css/bootstrap.min.css'; */
+
+/* ------- NAVBAR ------ */
+.navbar-inverse {
+  background-color: #007bff !important;
+  border-color: #007bff !important;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #fffdfd !important;
+}
+
+.navbar-top-links>li>a {
+  color: #fff !important;
+}
+
+/* ----- FOOTER ----- */
+footer {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+}

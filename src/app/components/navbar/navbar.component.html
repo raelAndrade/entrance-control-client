@@ -1,0 +1,166 @@
+<nav class="navbar navbar-inverse navbar-fixed-top bg-primary" role="navigation">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">CCB - Congregação Cristã no Brasil</a>
+  </div>
+
+  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+
+  <ul class="nav navbar-right navbar-top-links">
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <i class="fa fa-user fa-fw"></i> Login <b class="caret"></b>
+      </a>
+      <ul class="dropdown-menu dropdown-user">
+        <li><a href="#"><i class="fa fa-user fa-fw"></i> Perfil</a>
+        </li>
+        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Configurações</a>
+        </li>
+        <li class="divider"></li>
+        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Sair</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+      <ul class="nav" id="side-menu">
+        <li>
+          <a href="#" class="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+        </li>
+
+        <!-- MEETINGS -->
+        <li>
+          <a class="nav-item nav-link" routerLink="/"><i class="fa fa-group fa-fw"></i>
+            Reuniões<span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level">
+            <li>
+              <a class="nav-item nav-link" [routerLink]="['meeting/lista']" routerLinkActive="active"><i
+                  class="fa fa-list-alt fa-fw"></i> Listar</a>
+            </li>
+            <li>
+              <a class="nav-item nav-link" [routerLink]="['meeting/novo']" routerLinkActive="active"><i
+                  class="fa fa-edit fa-fw"></i> Cadastrar</a>
+            </li>
+            <li>
+              <a class="nav-item nav-link" [routerLink]="['meeting/record']" routerLinkActive="active"><i
+                  class="fa fa-file-text-o fa-fw"></i> Relatório</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- LOCALS -->
+        <li>
+          <a class="nav-item nav-link" routerLink="/"><i class="fa fa-map-marker"></i>
+            Locais<span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level">
+            <li>
+              <a class="nav-item nav-link" [routerLink]="['locals/lista']" routerLinkActive="active"><i
+                  class="fa fa-list-alt fa-fw"></i> Listar</a>
+            </li>
+            <li>
+              <a class="nav-item nav-link" [routerLink]="['locals/novo']" routerLinkActive="active"><i
+                  class="fa fa-edit fa-fw"></i> Cadastrar</a>
+            </li>
+            <li>
+              <a class="nav-item nav-link" [routerLink]="['locals/record']" routerLinkActive="active"><i
+                  class="fa fa-file-text-o fa-fw"></i> Relatório</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- <li>
+          <a href="#"><i class="fa fa-table fa-fw"></i> Tables</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-edit fa-fw"></i> Forms</a>
+        </li> -->
+        <!-- <li>
+          <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level">
+            <li>
+              <a href="panels-wells.html">Panels and Wells</a>
+            </li>
+            <li>
+              <a href="buttons.html">Buttons</a>
+            </li>
+            <li>
+              <a href="notifications.html">Notifications</a>
+            </li>
+            <li>
+              <a href="typography.html">Typography</a>
+            </li>
+            <li>
+              <a href="icons.html"> Icons</a>
+            </li>
+            <li>
+              <a href="grid.html">Grid</a>
+            </li>
+          </ul>
+        </li> -->
+        <!-- <li>
+          <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level">
+            <li>
+              <a href="#">Second Level Item</a>
+            </li>
+            <li>
+              <a href="#">Second Level Item</a>
+            </li>
+            <li>
+              <a href="#">Third Level <span class="fa arrow"></span></a>
+              <ul class="nav nav-third-level">
+                <li>
+                  <a href="#">Third Level Item</a>
+                </li>
+                <li>
+                  <a href="#">Third Level Item</a>
+                </li>
+                <li>
+                  <a href="#">Third Level Item</a>
+                </li>
+                <li>
+                  <a href="#">Third Level Item</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li> -->
+        <!-- <li>
+          <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level">
+            <li>
+              <a href="blank.html">Blank Page</a>
+            </li>
+            <li>
+              <a href="login.html">Login Page</a>
+            </li>
+          </ul>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">CCB</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" [routerLink]="['/']" routerLinkActive="active">Home <span
+          class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" [routerLink]="['/locals']" routerLinkActive="active">Locais</a>
+      <a class="nav-item nav-link" [routerLink]="['/meeting']" routerLinkActive="active">Reuniões</a>
+    </div>
+  </div>
+</nav> -->

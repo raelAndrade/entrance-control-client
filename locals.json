@@ -1,0 +1,112 @@
+{
+  "locals": [
+    {
+      "id": 1,
+      "initial": "RAVAP",
+      "description": "Regional Administrativa do Vale do Paraíba",
+      "administrations": [
+        {
+          "id": 1,
+          "name": "Guaratinguetá",
+          "cnpj": "123.123.123/0001-47",
+          "churches": [
+            {
+              "id": 1,
+              "name": "Vila Passos",
+              "code": "221605",
+              "description": "Congregação Vila Passos",
+              "rooms": [
+                {
+                  "id": 1,
+                  "name": "Sala Aula de Música",
+                  "description": "Sala Aula de Música",
+                  "entrances": [
+                    "MAIN_ENTRANCE"
+                  ],
+                  "created": "2020-01-15 01:14:34",
+                  "updated": "2020-01-15 01:14:59"
+                }
+              ],
+              "created": "2020-01-15 01:15:55",
+              "updated": "2020-01-15 01:28:31"
+            }
+          ],
+          "created": "2020-01-15 01:12:32",
+          "updated": "2020-01-15 01:18:58"
+        }
+      ],
+      "created": "2020-01-15 01:12:08",
+      "updated": "2020-01-15 01:13:21"
+    },
+    {
+      "initial": "RAVAP",
+      "description": "Regional Administrativa do Vale do Paraíba",
+      "administrations": [
+        {
+          "name": "Guaratinguetá",
+          "cnpj": "123.123.123/0001-47",
+          "churches": [
+            {
+              "name": "Vila Passos",
+              "code": "221605",
+              "description": "Congregação Vila Passos",
+              "rooms": [
+                {
+                  "name": "Sala Administração Coletas",
+                  "description": "Sala Administração de Coletas",
+                  "entrances": [
+                    "MAIN_ENTRANCE"
+                  ],
+                  "created": "2020-01-15 01:14:34",
+                  "updated": "2020-01-15 01:14:34"
+                }
+              ],
+              "created": "2020-01-15T10:18:24.981-02:00",
+              "updated": "2020-01-15T10:18:24.981-02:00"
+            }
+          ],
+          "created": "2020-01-15T10:18:24.981-02:00",
+          "updated": "2020-01-15T10:18:24.981-02:00"
+        }
+      ],
+      "created": "2020-01-15T10:18:24.981-02:00",
+      "updated": "2020-01-15T10:18:24.981-02:00",
+      "id": 2
+    },
+    {
+      "initial": "RAVAP",
+      "description": "Regional Administrativa do Vale do Paraíba",
+      "administrations": [
+        {
+          "name": "Guaratinguetá",
+          "cnpj": "123.123.123/0001-47",
+          "churches": [
+            {
+              "name": "Vila Passos",
+              "code": "221605",
+              "description": "Congregação Vila Passos",
+              "rooms": [
+                {
+                  "name": "Sala Administração Coletas",
+                  "description": "Sala Administração de Coletas",
+                  "entrances": [
+                    "MAIN_ENTRANCE"
+                  ],
+                  "created": "2020-01-15 01:14:34",
+                  "updated": "2020-01-15 01:14:34"
+                }
+              ],
+              "created": "2020-01-15T10:20:39.853-02:00",
+              "updated": "2020-01-15T10:20:39.853-02:00"
+            }
+          ],
+          "created": "2020-01-15T10:20:39.853-02:00",
+          "updated": "2020-01-15T10:20:39.853-02:00"
+        }
+      ],
+      "created": "2020-01-15T10:20:39.853-02:00",
+      "updated": "2020-01-15T10:20:39.853-02:00",
+      "id": 3
+    }
+  ]
+}

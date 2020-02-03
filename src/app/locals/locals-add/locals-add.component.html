@@ -1,0 +1,59 @@
+<div id="wrapper">
+
+  <app-navbar></app-navbar>
+
+  <div id="page-wrapper">
+
+    <br /><br /><br />
+
+    <form>
+      <p-fieldset legend="Cadastro">
+        <div class="ui-g ui-fluid">
+          <div class="ui-g-1">
+            <label for="local">Local</label>
+          </div>
+          <div class="ui-g-6">
+            <input id="local" type="text" size="30" pInputText [style]="{'width': '100%'}">
+          </div>
+          <div class="ui-g-1">
+            <label for="local">Data</label>
+          </div>
+          <div class="ui-g-4">
+            <p-calendar dateFormat="dd/mm/yyyy"></p-calendar>
+          </div>
+        </div>
+        <div class="ui-g ui-fluid">
+          <div class="ui-g-1">
+            <label for="descricao">Descrição</label>
+          </div>
+          <div class="ui-g-11">
+            <input id="descricao" type="text" size="30" pInputText [style]="{'width': '100%'}">
+          </div>
+        </div>
+      </p-fieldset>
+      <p-fieldset legend="Administração">
+        <div class="ui-g ui-fluid">
+          <div class="ui-g-1">
+            <label for="descricao">ADM</label>
+          </div>
+          <div class="ui-g-11">
+            <p-autoComplete field="name" [size]="30" placeholder="Administração" [minLength]="1"
+              [suggestions]="filteredAdminSingle" (completeMethod)="filterAdminSingle($event)">
+            </p-autoComplete>
+          </div>
+        </div>
+      </p-fieldset>
+      <div class="ui-g ui-fluid">
+        <div class="ui-g-8"></div>
+        <div class="ui-g-2">
+          <button pButton type="button" label="Salvar" class="ui-button-rounded"></button>
+        </div>
+        <div class="ui-g-2">
+          <button pButton type="button" label="Cancelar" class="ui-button-rounded ui-button-danger"></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-footer></app-footer>

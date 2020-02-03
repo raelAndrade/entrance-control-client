@@ -1,0 +1,45 @@
+@hostname = localhost
+@port = 3001
+@name = administrations
+@createdAt = {{$localDatetime iso8601}}
+@contentType = application/json
+
+###
+
+GET http://{{hostname}}:{{port}}/{{name}}
+
+###
+
+GET http://{{hostname}}:{{port}}/{{name}}/1
+
+###
+
+POST http://localhost:3001/administrations HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Taubaté",
+  "cnpj": "123.123.123/0001-47",
+  "churches": [
+    {
+      "name": "Jardim Gurilândia",
+      "code": "221605",
+      "description": "Congregação Gurilândia",
+      "rooms": [
+        {
+          "name": "Sala Aula de Música",
+          "description": "Sala Aula de Música",
+          "entrances": [
+            "MAIN_ENTRANCE"
+          ],
+          "created": "{{$localDatetime iso8601}}",
+          "updated": "{{$localDatetime iso8601}}"
+        }
+      ],
+      "created": "{{$localDatetime iso8601}}",
+      "updated": "{{$localDatetime iso8601}}"
+    }
+  ],
+  "created": "{{$localDatetime iso8601}}",
+  "updated": "{{$localDatetime iso8601}}"
+}

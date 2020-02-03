@@ -1,0 +1,60 @@
+{
+  "administrations": [
+    {
+      "id": 1,
+      "name": "Guaratinguetá",
+      "cnpj": "123.123.123/0001-47",
+      "churches": [
+        {
+          "id": 1,
+          "name": "Vila Passos",
+          "code": "221605",
+          "description": "Congregação Vila Passos",
+          "rooms": [
+            {
+              "id": 1,
+              "name": "Sala Aula de Música",
+              "description": "Sala Aula de Música",
+              "entrances": [
+                "MAIN_ENTRANCE"
+              ],
+              "created": "2020-01-15 01:14:34",
+              "updated": "2020-01-15 01:14:59"
+            }
+          ],
+          "created": "2020-01-15 01:15:55",
+          "updated": "2020-01-15 01:28:31"
+        }
+      ],
+      "created": "2020-01-15 01:12:32",
+      "updated": "2020-01-15 01:18:58"
+    },
+    {
+      "name": "Taubaté",
+      "cnpj": "123.123.123/0001-47",
+      "churches": [
+        {
+          "name": "Jardim Gurilândia",
+          "code": "221605",
+          "description": "Congregação Gurilândia",
+          "rooms": [
+            {
+              "name": "Sala Aula de Música",
+              "description": "Sala Aula de Música",
+              "entrances": [
+                "MAIN_ENTRANCE"
+              ],
+              "created": "2020-01-23T17:20:44.580-02:00",
+              "updated": "2020-01-23T17:20:44.580-02:00"
+            }
+          ],
+          "created": "2020-01-23T17:20:44.580-02:00",
+          "updated": "2020-01-23T17:20:44.580-02:00"
+        }
+      ],
+      "created": "2020-01-23T17:20:44.580-02:00",
+      "updated": "2020-01-23T17:20:44.581-02:00",
+      "id": 2
+    }
+  ]
+}

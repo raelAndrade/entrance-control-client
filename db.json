@@ -1,0 +1,13 @@
+{
+    "locals": [
+      {
+        "id": 1,
+        "name": "Reunião Geral de Ensinamentos",
+        "description": "Reunião geral de Ensinamentos de 2019 - Vale do Paraíba",
+        "churchName": "Igreja Pindamonhangaba",
+        "churchRoom": "Main",
+        "churchCode": "1",
+        "createdByUser": "123"
+      }
+    ]
+  }
