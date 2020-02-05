@@ -16,7 +16,7 @@ import { ButtonModule } from 'primeng/components/button/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { MenubarComponent } from './components/menubar/menubar.component';
 import { HeaderComponent } from '../app/components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MeetingsAddComponent } from './meetings/meetings-add/meetings-add.component';
@@ -27,7 +27,7 @@ import { LocalsListComponent } from './locals/locals-list/locals-list.component'
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
+    MenubarComponent,
     HeaderComponent,
     FooterComponent,
     MeetingsAddComponent,
