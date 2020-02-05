@@ -13,6 +13,7 @@ import { CalendarModule } from 'primeng/components/calendar/calendar';
 import { FieldsetModule } from 'primeng/components/fieldset/fieldset';
 import { AutoCompleteModule } from 'primeng/components/autocomplete/autocomplete';
 import { ButtonModule } from 'primeng/components/button/button';
+import { DropdownModule } from 'primeng/components/dropdown/dropdown';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -49,7 +50,8 @@ import { LocalsListComponent } from './locals/locals-list/locals-list.component'
     CalendarModule,
     FieldsetModule,
     AutoCompleteModule,
-    ButtonModule
+    ButtonModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]
