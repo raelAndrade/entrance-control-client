@@ -14,6 +14,8 @@ import { FieldsetModule } from 'primeng/components/fieldset/fieldset';
 import { AutoCompleteModule } from 'primeng/components/autocomplete/autocomplete';
 import { ButtonModule } from 'primeng/components/button/button';
 import { DropdownModule } from 'primeng/components/dropdown/dropdown';
+import { CheckboxModule } from 'primeng/components/checkbox/checkbox';
+import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -51,7 +53,9 @@ import { LocalsListComponent } from './locals/locals-list/locals-list.component'
     FieldsetModule,
     AutoCompleteModule,
     ButtonModule,
-    DropdownModule
+    DropdownModule,
+    CheckboxModule,
+    SelectButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

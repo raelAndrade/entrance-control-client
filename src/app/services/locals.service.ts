@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
-import { Locals } from './locals-list/locals';
+import { Locals } from '../models/locals';
 
 @Injectable({
   providedIn: 'root'

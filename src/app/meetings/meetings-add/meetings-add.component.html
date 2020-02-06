@@ -1,15 +1,17 @@
 <div id="wrapper">
   <div class="page-wrapper">
-
     <br /><br /><br />
 
+    <h1>Cadastro de Reunião</h1>
+
+    <hr />
+
     <form action="" method="POST">
-      <p-fieldset legend="IGREJA">
+      <p-fieldset legend="Dados da Igreja">
         <div class="ui-g ui-fluid">
           <div class="form-group ui-g-6">
             <label for="igreja">Igreja: </label>
-            <input type="text" pInputText />
-            <!--<input type="text" class="form-control" id="igreja">-->
+            <input type="text" pInputText class="form-control" id="igreja" />
           </div>
           <div class="form-group ui-g-6">
             <label for="salao">Salão: </label>
@@ -22,33 +24,37 @@
         </div>
       </p-fieldset>
 
-      <p-fieldset legend="Data e hora">
+      <p-fieldset legend="Data e hora da reunião">
         <div class="form-group ui-g-6">
           <label for="dtInicio">Data Inicial: </label>
-          <input type="text" pInputText class="form-control" />
-          <!-- <input type="text" class="form-control" id="dtInicio"> -->
+          <input type="date" pInputText class="form-control" id="dtInicio" />
         </div>
         <div class="form-group ui-g-6">
           <label for="hrInicial">Hora inicial: </label>
-          <input type="time" pInputText class="form-control" />
-          <!-- <input type="time" class="form-control" id="hrInicial"> -->
+          <input type="time" pInputText class="form-control" id="hrInicial"/>
         </div>
 
         <div class="form-group ui-g-6">
           <label for="dtTerminio">Data Términio: </label>
-          <input type="text" pInputText class="form-control" />
-          <!-- <input type="text" class="form-control" id="dtTerminio"> -->
+          <input type="date" pInputText class="form-control" id="dtTerminio" />
         </div>
         <div class="form-group ui-g-6">
           <label for="hrTerminio">Hora Términio: </label>
-          <input type="time" pInputText class="form-control" />
-          <!-- <input type="time" class="form-control" id="hrTerminio"> -->
+          <input type="time" pInputText class="form-control" id="hrTerminio" />
         </div>
       </p-fieldset>
+
+      <p-fieldset legend="Descrição da reunião">
+        <div class="form-group ui-g-12">
+            <label for="administracao">Administração: </label>
+            <input type="text" pInputText class="form-control" id="administracao" />
+        </div>
+    </p-fieldset>
 
       <br />
       <button type="submit" class="btn btn-primary">Salvar</button>
     </form>
-
   </div>
 </div>
+
+<br /><br /><br />

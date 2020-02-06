@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
-import { Administrations } from './locals-add/adm-list'
+import { Administrations } from '../models/adm-list';
 
 @Injectable({
   providedIn: 'root'

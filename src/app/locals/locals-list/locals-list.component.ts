@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalsService } from '../locals.service';
-import { Locals } from './locals';
+import { LocalsService } from '../../services/locals.service';
+import { Locals } from '../../models/locals';
 
 @Component({
   selector: 'app-locals-list',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Administrations } from './adm-list';
-import { AdmService } from '../adm.service';
+import { Administrations } from '../../models/adm-list';
+import { AdmService } from '../../services/adm.service';
 
 @Component({
   selector: 'app-locals-add',
