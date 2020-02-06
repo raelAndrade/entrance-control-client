@@ -1,5 +1,5 @@
 @hostname = localhost
-@port = 3001
+@port = 3100
 @name = administrations
 @createdAt = {{$localDatetime iso8601}}
 @contentType = application/json
@@ -14,7 +14,7 @@ GET http://{{hostname}}:{{port}}/{{name}}/1
 
 ###
 
-POST http://localhost:3001/administrations HTTP/1.1
+POST http://localhost:3100/administrations HTTP/1.1
 content-type: application/json
 
 {

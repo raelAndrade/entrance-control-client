@@ -18,6 +18,7 @@ import { CheckboxModule } from 'primeng/components/checkbox/checkbox';
 import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
 import { HeaderComponent } from '../app/components/header/header.component';
@@ -26,6 +27,9 @@ import { MeetingsAddComponent } from './meetings/meetings-add/meetings-add.compo
 import { MeetingsListComponent } from './meetings/meetings-list/meetings-list.component';
 import { LocalsAddComponent } from './locals/locals-add/locals-add.component';
 import { LocalsListComponent } from './locals/locals-list/locals-list.component';
+import { MeetingsAuthenticationComponent } from './meetings/meetings-authentication/meetings-authentication.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,10 @@ import { LocalsListComponent } from './locals/locals-list/locals-list.component'
     MeetingsAddComponent,
     MeetingsListComponent,
     LocalsAddComponent,
-    LocalsListComponent
+    LocalsListComponent,
+    MeetingsAuthenticationComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     AppRoutingModule,

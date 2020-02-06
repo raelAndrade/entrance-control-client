@@ -7,6 +7,7 @@
     <hr />
 
     <form action="" method="POST">
+
       <p-fieldset legend="Dados da Igreja">
         <div class="ui-g ui-fluid">
           <div class="form-group ui-g-6">
@@ -26,34 +27,47 @@
 
       <p-fieldset legend="Data e hora da reunião">
         <div class="form-group ui-g-6">
-          <label for="dtInicio">Data Inicial: </label>
-          <input type="date" pInputText class="form-control" id="dtInicio" />
+          <label for="dtInicio">Data Inicial: </label><br />
+          <p-calendar [showIcon]="true" id="dtInicio"></p-calendar>
         </div>
         <div class="form-group ui-g-6">
-          <label for="hrInicial">Hora inicial: </label>
-          <input type="time" pInputText class="form-control" id="hrInicial"/>
+          <label for="hrInicial">Hora inicial: </label><br />
+          <div class="ui-inputgroup">
+            <p-calendar [timeOnly]="true" id="hrInicial" [showIcon]="true"></p-calendar>
+          </div>
         </div>
 
         <div class="form-group ui-g-6">
-          <label for="dtTerminio">Data Términio: </label>
-          <input type="date" pInputText class="form-control" id="dtTerminio" />
+          <label for="dtTerminio">Data Términio: </label><br />
+          <p-calendar [showIcon]="true" id="dtTerminio"></p-calendar>
         </div>
         <div class="form-group ui-g-6">
-          <label for="hrTerminio">Hora Términio: </label>
-          <input type="time" pInputText class="form-control" id="hrTerminio" />
+          <label for="hrTerminio">Hora Términio: </label><br />
+          <div class="ui-inputgroup">
+            <p-calendar [timeOnly]="true" id="hrTerminio" [showIcon]="true"></p-calendar>
+          </div>
         </div>
       </p-fieldset>
 
       <p-fieldset legend="Descrição da reunião">
-        <div class="form-group ui-g-12">
+        <div class="ui-g ui-fluid">
+          <div class="ui-g-12">
             <label for="administracao">Administração: </label>
-            <input type="text" pInputText class="form-control" id="administracao" />
+            <p-autoComplete [suggestions]="filteredAdministration" (completeMethod)="filterAdministration($event)"
+              field="name" [size]="30" placeholder="Administrações" [minLength]="1" id="administracao"></p-autoComplete>
+          </div>
         </div>
-    </p-fieldset>
+      </p-fieldset>
 
       <br />
-      <button type="submit" class="btn btn-primary">Salvar</button>
+
+      <div class="ui-g ui-fluid">
+        <div class="ui-g-12 ui-md-1 ui-md-offset-11">
+          <button pButton type="submit" label="Salvar" (click)="handleClick($event)"></button>
+        </div>
+      </div>
     </form>
+
   </div>
 </div>
 
