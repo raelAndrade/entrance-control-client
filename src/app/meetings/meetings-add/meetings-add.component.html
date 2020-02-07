@@ -49,12 +49,12 @@
         </div>
       </p-fieldset>
 
-      <p-fieldset legend="Descrição da reunião">
+      <p-fieldset legend="Administração">
         <div class="ui-g ui-fluid">
           <div class="ui-g-12">
             <label for="administracao">Administração: </label>
             <p-autoComplete [suggestions]="filteredAdministration" (completeMethod)="filterAdministration($event)"
-              field="name" [size]="30" placeholder="Administrações" [minLength]="1" id="administracao"></p-autoComplete>
+              field="name" [size]="30" [minLength]="1" id="administracao"></p-autoComplete>
           </div>
         </div>
       </p-fieldset>

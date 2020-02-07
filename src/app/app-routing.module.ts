@@ -7,7 +7,7 @@ import { MeetingsAuthenticationComponent } from './meetings/meetings-authenticat
 import { LocalsListComponent } from './locals/locals-list/locals-list.component';
 import { LocalsAddComponent } from './locals/locals-add/locals-add.component';
 import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './components/security/login/login.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },

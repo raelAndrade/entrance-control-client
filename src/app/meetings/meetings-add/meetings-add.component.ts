@@ -37,17 +37,18 @@ export class MeetingsAddComponent implements OnInit {
   }
 
   filterAdministration(event) {
-    let query = event.query;
+    const query = event.query;
     this.service.list().subscribe(data => {
       this.filteredAdministration = this.filterAdmin(query, data);
     });
   }
 
   filterAdmin(query, admin: any[]): any[] {
-    let filtered: any[] = [];
+    const filtered: any[] = [];
+    // tslint:disable-next-line:prefer-for-of
     for (let i = 0; i < admin.length; i++) {
-      let adm = admin[i];
-      if (adm.name.toLowerCase().indexOf(query.toLowerCase()) == 0) {
+      const adm = admin[i];
+      if (adm.name.toLowerCase().indexOf(query.toLowerCase()) === 0) {
         filtered.push(adm);
       }
     }

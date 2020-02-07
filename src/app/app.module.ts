@@ -29,7 +29,7 @@ import { LocalsAddComponent } from './locals/locals-add/locals-add.component';
 import { LocalsListComponent } from './locals/locals-list/locals-list.component';
 import { MeetingsAuthenticationComponent } from './meetings/meetings-authentication/meetings-authentication.component';
 import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './components/security/login/login.component';
 
 @NgModule({
   declarations: [
