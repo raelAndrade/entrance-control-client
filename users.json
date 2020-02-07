@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "email": "israel@teste.com",
+      "password": "$2a$10$M9ioCskSe0cz88VvUEz2A.ptdfykEAWieVkyna1KrcHb6HBlJSTPq",
+      "name": "israel",
+      "profile": "ADM",
+      "id": 1
+    },
+    {
+      "email": "jether@teste.com",
+      "password": "$2a$10$7sCbD89aVoCdWREqol9AhOx5Wt.OsoDoUM7kkqDt5CsBzxnyKMdy.",
+      "name": "jether",
+      "profile": "COMUM",
+      "id": 2
+    },
+    {
+      "email": "admin@helpdesk.com",
+      "password": "$2a$10$AJEkVBGJ8B/VwRf0.cAilusDFuODNyUI8.UWW.Q6t7S.3/IbeNYBi",
+      "id": 3,
+      "name": "",
+      "profile": ""
+    }
+  ]
+}

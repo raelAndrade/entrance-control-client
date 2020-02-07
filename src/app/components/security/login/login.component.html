@@ -4,22 +4,24 @@
 
       <br /><br />
 
-      <!-- <p-panel header="Fazer Login" [style]="{'margin-bottom':'20px'}"> -->
-      <form role="form">
-        <img src="../../../../assets/img/logotipo-ccb.png" class="logotipo" />
+      <form class="form-horizontal" #form="ngForm" (ngSubmit)="login()" novalidate>
+        <!-- <img src="../../../../assets/img/logotipo-ccb.png" class="logotipo" /> -->
         <br />
         <hr>
         <h4 class="text-center">Fazer login</h4>
 
         <div class="form-group">
-          <input class="form-control" placeholder="Usuário" name="user" type="text" autofocus>
+          <input class="form-control" [(ngModel)]="user.email" placeholder="Usuário" id="inputEmail" #name="ngModel"
+            name="email" type="text" autofocus email>
+          <!-- <span class="help-block" *ngIf="email.invalid && email.dirty">Nome inválido</span> -->
         </div>
         <div class="form-group">
-          <input class="form-control" placeholder="Password" name="password" type="password" value="">
+          <input [(ngModel)]="user.password" class="form-control" placeholder="Password" id="inputPassword"
+            #password="ngModel" name="password" type="password" password>
+          <!-- <span class="help-block" *ngIf="password.invalid && password.dirty">Senha é requerida</span> -->
         </div>
-        <button pButton type="button" label="Entrar"></button>
+        <button pButton type="submit" label="Entrar"></button>
       </form>
-      <!-- </p-panel> -->
 
     </div>
   </div>

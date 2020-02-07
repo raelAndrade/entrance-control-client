@@ -12,19 +12,19 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class AuthGuard implements CanActivate {
 
-    public shared: SharedService;
+  public shared: SharedService;
 
-    constructor(private router: Router) {
-        this.shared = SharedService.getInstance();
-    }
-    canActivate(
-        route: ActivatedRouteSnapshot,
-        state: RouterStateSnapshot): boolean | Observable<boolean> | boolean {
+  constructor(private router: Router) {
+    this.shared = SharedService.getInstance();
+  }
+  canActivate(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): boolean | Observable<boolean> | boolean {
 
-            if (this.shared.isLoggedIn()) {
-                return true;
-            }
-            this.router.navigate(['/login']);
-            return false;
+    if (this.shared.isLoggedIn()) {
+      return true;
     }
+    this.router.navigate(['/login']);
+    return false;
+  }
 }

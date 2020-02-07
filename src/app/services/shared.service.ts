@@ -26,6 +26,6 @@ export class SharedService {
     if (this.user == null) {
       return false;
     }
-    return this.user.name !== '';
+    return this.user.email !== '';
   }
 }

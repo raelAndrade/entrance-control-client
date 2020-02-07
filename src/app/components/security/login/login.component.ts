@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { User } from 'src/app/models/user';
 import { SharedService } from 'src/app/services/shared.service';
 import { UserService } from 'src/app/services/user.service';
@@ -12,7 +13,7 @@ import { CurrentUser } from 'src/app/models/current-user';
 })
 export class LoginComponent implements OnInit {
 
-  user = new User('', '', '', '');
+  user = new User('', '', '', '', '');
   shared: SharedService;
   message: string;
 
@@ -44,12 +45,12 @@ export class LoginComponent implements OnInit {
 
   cancelLogin() {
     this.message = '';
-    this.user = new User('', '', '', '');
+    this.user = new User('', '', '', '', '');
     window.location.href = '/login';
     window.location.reload();
   }
 
-  getFromGroupClass(isInvalid: boolean, isDirty): {} {
+  getFromGroupClass(isInvalid: boolean, isDirty: any): {} {
     return {
       'form-group': true,
       'has-error': isInvalid && isDirty,
