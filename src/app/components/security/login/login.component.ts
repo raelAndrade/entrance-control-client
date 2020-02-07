@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
 import { SharedService } from 'src/app/services/shared.service';
 import { UserService } from 'src/app/services/user.service';
-import { Router } from '@angular/router';
 import { CurrentUser } from 'src/app/models/current-user';
 
 @Component({
@@ -20,8 +20,8 @@ export class LoginComponent implements OnInit {
     private userService: UserService,
     private router: Router
   ) {
-      this.shared = SharedService.getInstance();
-    }
+    this.shared = SharedService.getInstance();
+  }
 
   ngOnInit() {
   }
@@ -47,6 +47,14 @@ export class LoginComponent implements OnInit {
     this.user = new User('', '', '', '');
     window.location.href = '/login';
     window.location.reload();
+  }
+
+  getFromGroupClass(isInvalid: boolean, isDirty): {} {
+    return {
+      'form-group': true,
+      'has-error': isInvalid && isDirty,
+      'has-success': !isInvalid && isDirty
+    };
   }
 
 }

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 /* Componentes PrimeNG */
 import { MessagesModule } from 'primeng/components/messages/messages';
@@ -17,7 +17,7 @@ import { DropdownModule } from 'primeng/components/dropdown/dropdown';
 import { CheckboxModule } from 'primeng/components/checkbox/checkbox';
 import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
 
-import { AppRoutingModule } from './app-routing.module';
+import { routes } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { MenubarComponent } from './components/menubar/menubar.component';
@@ -30,6 +30,10 @@ import { LocalsListComponent } from './locals/locals-list/locals-list.component'
 import { MeetingsAuthenticationComponent } from './meetings/meetings-authentication/meetings-authentication.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/security/login/login.component';
+import { AuthGuard } from './components/security/auth.guard';
+import { AuthInterceptor } from './components/security/auth.interceptor';
+import { SharedService } from './services/shared.service';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +50,7 @@ import { LoginComponent } from './components/security/login/login.component';
     LoginComponent
   ],
   imports: [
-    AppRoutingModule,
+    routes,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -64,7 +68,16 @@ import { LoginComponent } from './components/security/login/login.component';
     CheckboxModule,
     SelectButtonModule
   ],
-  providers: [],
+  providers: [
+    UserService,
+    SharedService,
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

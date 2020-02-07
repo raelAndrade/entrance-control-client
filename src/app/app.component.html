@@ -1,13 +1,25 @@
-<app-header [hidden]="!showTemplate"></app-header>
-
-<div id="wrapper" [ngClass]="showContentWrapper()">
-
+<!-- <app-header></app-header>
+<app-menubar [hidden]="!showTemplate"></app-menubar>
+<div id="wrapper">
   <div id="page-wrapper">
-
     <router-outlet></router-outlet>
+  </div>
+</div>
+<app-footer [hidden]="!showTemplate"></app-footer> -->
+
+<app-header></app-header>
+
+<app-menubar></app-menubar>
+
+<div [ngClass]="showContentWrapper()">
+
+  <div id="wrapper">
+
+    <div id="page-wrapper">
+      <router-outlet></router-outlet>
+    </div>
 
   </div>
-
 </div>
 
 <app-footer></app-footer>
