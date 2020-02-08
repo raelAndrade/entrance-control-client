@@ -16,6 +16,7 @@ import { ButtonModule } from 'primeng/components/button/button';
 import { DropdownModule } from 'primeng/components/dropdown/dropdown';
 import { CheckboxModule } from 'primeng/components/checkbox/checkbox';
 import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
+import { ToggleButtonModule } from 'primeng/components/togglebutton/togglebutton';
 
 import { routes } from './app-routing.module';
 
@@ -34,7 +35,9 @@ import { AuthGuard } from './components/security/auth.guard';
 import { AuthInterceptor } from './components/security/auth.interceptor';
 import { SharedService } from './services/shared.service';
 import { UserService } from './services/user.service';
-import { SheduleComponent } from './scheduled/shedule/shedule.component';
+import { ScheduleListChurchComponent } from './scheduled/schedule-list-church/schedule-list-church.component';
+import { ScheduleAddComponent } from './scheduled/schedule-add/schedule-add.component';
+import { ScheduleListMeetingComponent } from './scheduled/schedule-list-meeting/schedule-list-meeting.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +52,9 @@ import { SheduleComponent } from './scheduled/shedule/shedule.component';
     MeetingsAuthenticationComponent,
     HomeComponent,
     LoginComponent,
-    SheduleComponent
+    ScheduleListChurchComponent,
+    ScheduleAddComponent,
+    ScheduleListMeetingComponent
   ],
   imports: [
     routes,
@@ -68,7 +73,8 @@ import { SheduleComponent } from './scheduled/shedule/shedule.component';
     ButtonModule,
     DropdownModule,
     CheckboxModule,
-    SelectButtonModule
+    SelectButtonModule,
+    ToggleButtonModule
   ],
   providers: [
     UserService,

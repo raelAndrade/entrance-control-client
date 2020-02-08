@@ -1,0 +1,41 @@
+<br /><br /><br />
+
+<h1>Listar Igrejas</h1>
+
+<hr>
+
+<div class="ui-g ui-fluid">
+  <div class="ui-g-12">
+    <label for="cordigo">Regional: </label>
+    <p-autoComplete [suggestions]="filteredAdministration" (completeMethod)="filterAdministration($event)" field="name"
+      [size]="30" [minLength]="1" id="administracao"></p-autoComplete>
+  </div>
+
+  <div class="ui-g-12">
+    <label for="cordigo">Administração: </label>
+    <p-autoComplete [suggestions]="filteredAdministration" (completeMethod)="filterAdministration($event)" field="name"
+      [size]="30" [minLength]="1" id="administracao"></p-autoComplete>
+  </div>
+
+</div>
+
+<br /><br />
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th class="text-center">Código Relatório</th>
+      <th class="text-center">Nome</th>
+      <th class="text-center">Ação</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="text-center">123456</td>
+      <td class="text-center">Guaratinguetá</td>
+      <td class="text-center">
+        <button pButton type="button" label="Cadastrar reunião" (click)="registerMeeting()"></button>
+      </td>
+    </tr>
+  </tbody>
+</table>

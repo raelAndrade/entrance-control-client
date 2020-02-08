@@ -58,4 +58,10 @@ export class LoginComponent implements OnInit {
     };
   } */
 
+  /* showWrapper() {
+    return {
+      'page-wrapper' : this.shared.isLoggedIn()
+    };
+  } */
+
 }
