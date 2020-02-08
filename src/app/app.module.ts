@@ -34,6 +34,7 @@ import { AuthGuard } from './components/security/auth.guard';
 import { AuthInterceptor } from './components/security/auth.interceptor';
 import { SharedService } from './services/shared.service';
 import { UserService } from './services/user.service';
+import { SheduleComponent } from './scheduled/shedule/shedule.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { UserService } from './services/user.service';
     LocalsListComponent,
     MeetingsAuthenticationComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    SheduleComponent
   ],
   imports: [
     routes,

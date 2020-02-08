@@ -8,23 +8,25 @@ import { SharedService } from './services/shared.service';
 })
 export class AppComponent {
   title = 'CCB - Controle de Entradas';
-  showTemplate: boolean = false;
+  showTemplate: false;
   public shared: SharedService;
 
   constructor() {
     this.shared = SharedService.getInstance();
   }
 
+  // tslint:disable-next-line:use-lifecycle-interface
   ngOnInit() {
     this.shared.showTemplate.subscribe(
       show => this.showTemplate = show
     );
   }
 
-  showContentWrapper() {
+  showWrapper() {
     return {
-      'content-wrapper': this.shared.isLoggedIn()
-    }
+      // tslint:disable-next-line:object-literal-key-quotes
+      'wrapper' : this.shared.isLoggedIn()
+    };
   }
 
 }

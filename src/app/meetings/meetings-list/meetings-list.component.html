@@ -23,26 +23,14 @@
       <td>
         <p-checkbox></p-checkbox>
       </td>
-      <td class="text-center">Reunião - 001</td>
-      <td class="text-center">08/02/2020</td>
-      <td class="text-center">08/02/2020</td>
-      <td class="text-center">Vila Passos</td>
-      <td class="text-center">Principal</td>
-      <td class="text-center">
-        <p-selectButton [options]="status" multiple="multiple"></p-selectButton>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p-checkbox></p-checkbox>
-      </td>
       <td class="text-center">Reunião - 002</td>
       <td class="text-center">08/02/2020</td>
       <td class="text-center">08/02/2020</td>
       <td class="text-center">Bairro da Cruz</td>
       <td class="text-center">Piedade</td>
       <td class="text-center">
-        <p-selectButton [options]="status" multiple="multiple"></p-selectButton>
+        <button pButton type="button" label="Fechar" class="ui-button-success"></button>
+        <button pButton type="button" label="Acessar" class="ui-button-info" (click)="accessMeeting()"></button>
       </td>
     </tr>
   </tbody>

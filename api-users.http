@@ -1,5 +1,5 @@
 @hostname = localhost
-@port = 3300
+@port = 3200
 @name = users
 @createdAt = {{$localDatetime iso8601}}
 @contentType = application/json
@@ -14,7 +14,7 @@ GET http://{{hostname}}:{{port}}/{{name}}/1
 
 ###
 
-POST http://localhost:3300/register HTTP/1.1
+POST http://localhost:3200/register HTTP/1.1
 {
   "email": "israel@teste.com",
   "password": "123456",

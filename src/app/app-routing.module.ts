@@ -1,4 +1,4 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AuthGuard } from './components/security/auth.guard';
@@ -19,12 +19,5 @@ export const ROUTES: Routes = [
   { path: 'locais/lista', component: LocalsListComponent, /* canActivate: [AuthGuard] */ },
   { path: 'locais/novo', component: LocalsAddComponent, /* canActivate: [AuthGuard] */ }
 ];
-
-/* @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-}) */
-
-/* export class AppRoutingModule { } */
 
 export const routes: ModuleWithProviders = RouterModule.forRoot(ROUTES);

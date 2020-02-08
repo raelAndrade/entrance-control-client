@@ -5,19 +5,19 @@
       <br /><br />
 
       <form class="form-horizontal" #form="ngForm" (ngSubmit)="login()" novalidate>
-        <!-- <img src="../../../../assets/img/logotipo-ccb.png" class="logotipo" /> -->
+        <img src="../../../../assets/img/logotipo-ccb.png" class="logotipo" />
         <br />
         <hr>
         <h4 class="text-center">Fazer login</h4>
 
         <div class="form-group">
-          <input class="form-control" [(ngModel)]="user.email" placeholder="Usuário" id="inputEmail" #name="ngModel"
-            name="email" type="text" autofocus email>
+          <input type="email" class="form-control" [(ngModel)]="user.email" placeholder="E-mail" id="inputEmail" #email="ngModel"
+            name="email" email>
           <!-- <span class="help-block" *ngIf="email.invalid && email.dirty">Nome inválido</span> -->
         </div>
         <div class="form-group">
-          <input [(ngModel)]="user.password" class="form-control" placeholder="Password" id="inputPassword"
-            #password="ngModel" name="password" type="password" password>
+          <input type="password" [(ngModel)]="user.password" class="form-control" placeholder="Password" id="inputPassword"
+            #password="ngModel" name="password" password>
           <!-- <span class="help-block" *ngIf="password.invalid && password.dirty">Senha é requerida</span> -->
         </div>
         <button pButton type="submit" label="Entrar"></button>

@@ -4,6 +4,11 @@
 
 export const environment = {
   production: false
+  /*apiUrl: 'http://localhost:3200',
+
+  tokenWhitelistedDomains: [ /localhost:3200/ ],
+  tokenBlacklistedRoutes: [/\/oauth\/token/]*/
+
 };
 
 /*

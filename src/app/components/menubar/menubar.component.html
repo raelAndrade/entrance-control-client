@@ -5,20 +5,30 @@
         <a href="/" class="active"><i class="fa fa-dashboard fa-fw"></i> Home</a>
       </li>
 
+      <!-- SCHEDULE -->
+      <!-- <li *ngIf="shared.user.profile == 'ADM'"> -->
+        <li>
+          <a href="#"><i class="fa fa-calendar"></i> Agendamendos<span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level">
+            <li>
+              <a class="nav-item nav-link" href="agendamento/listaIgreja"><i class="fa fa-list-alt fa-fw"></i> Listar Igrejas</a>
+            </li>
+            <li>
+              <a class="nav-item nav-link" href="agendamento/listaAgendamento"><i class="fa fa-list-alt fa-fw"></i> Listar Agendamentos</a>
+            </li>
+            <!-- <li>
+              <a class="nav-item nav-link" href="locais/relatorio"><i class="fa fa-file-text-o fa-fw"></i> Relatório</a>
+            </li> -->
+          </ul>
+        </li>
+
       <!-- MEETINGS -->
       <!-- <li *ngIf="shared.user.profile == 'ADM'"> -->
       <li>
         <a href="#"><i class="fa fa-group fa-fw"></i> Reuniões<span class="fa arrow"></span></a>
         <ul class="nav nav-second-level">
           <li>
-            <a class="nav-item nav-link" href="reuniao/lista"><i class="fa fa-list-alt fa-fw"></i> Listar</a>
-          </li>
-          <li>
-            <a class="nav-item nav-link" href="reuniao/novo"><i class="fa fa-edit fa-fw"></i> Cadastrar</a>
-          </li>
-          <li>
-            <a class="nav-item nav-link" href="reuniao/autenticacao"><i class="fa fa-id-card fa-fw"></i>
-              Autenticação</a>
+            <a class="nav-item nav-link" href="reuniao/lista"><i class="fa fa-list-alt fa-fw"></i> Listar Reuniões</a>
           </li>
           <li>
             <a class="nav-item nav-link" href="reuniao/relatorio"><i class="fa fa-file-text-o fa-fw"></i>
