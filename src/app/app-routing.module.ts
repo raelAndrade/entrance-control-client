@@ -15,13 +15,13 @@ import { LocalsAddComponent } from './locals/locals-add/locals-add.component';
 
 export const ROUTES: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: '', component: HomeComponent, /* canActivate: [AuthGuard] */ },
-  { path: 'reuniao/listarReunioes', component: MeetingsListComponent, /* canActivate: [AuthGuard] */ },
-  { path: 'reuniao/novo', component: MeetingsAddComponent, /* canActivate: [AuthGuard] */ },
-  { path: 'reuniao/autenticacao', component: MeetingsAuthenticationComponent, /* canActivate: [AuthGuard] */ },
-  { path: 'agendamento/listaIgrejas', component: ScheduleListChurchComponent /* canActivate: [AuthGuard] */},
-  { path: 'agendamento/listaAgendamentos', component: ScheduleListMeetingComponent /* canActivate: [AuthGuard] */},
-  { path: 'agendamento/novoAgendamento', component: ScheduleAddComponent /* canActivate: [AuthGuard] */ },
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'reuniao/listarReunioes', component: MeetingsListComponent, canActivate: [AuthGuard] },
+  { path: 'reuniao/novo', component: MeetingsAddComponent, canActivate: [AuthGuard] },
+  { path: 'reuniao/autenticacao', component: MeetingsAuthenticationComponent, canActivate: [AuthGuard] },
+  { path: 'agendamento/listaIgrejas', component: ScheduleListChurchComponent, canActivate: [AuthGuard]},
+  { path: 'agendamento/listaAgendamentos', component: ScheduleListMeetingComponent, canActivate: [AuthGuard]},
+  { path: 'agendamento/novoAgendamento', component: ScheduleAddComponent, canActivate: [AuthGuard] },
 
   // { path: 'locais/novo', component: LocalsAddComponent, /* canActivate: [AuthGuard] */ },
   // { path: 'agendamentos/lista', component: LocalsListComponent, /* canActivate: [AuthGuard] */ },

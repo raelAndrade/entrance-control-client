@@ -24,8 +24,7 @@ export class AppComponent {
 
   showWrapper() {
     return {
-      // tslint:disable-next-line:object-literal-key-quotes
-      'wrapper' : this.shared.isLoggedIn()
+      'page-wrapper' : this.shared.isLoggedIn()
     };
   }
 

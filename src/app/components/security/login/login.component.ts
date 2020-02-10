@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       this.shared.user = userAuthentication.user;
       this.shared.user.profile = this.shared.user.profile.substring(3);
       this.shared.showTemplate.emit(true);
-      this.router.navigate(['/']);
+      this.router.navigate(['']);
     }, err => {
       this.shared.token = null;
       this.shared.user = null;
@@ -55,12 +55,6 @@ export class LoginComponent implements OnInit {
       'form-group': true,
       'has-error': isInvalid && isDirty,
       'has-success': !isInvalid && isDirty
-    };
-  } */
-
-  /* showWrapper() {
-    return {
-      'page-wrapper' : this.shared.isLoggedIn()
     };
   } */
 
