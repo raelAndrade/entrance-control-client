@@ -32,7 +32,6 @@ export class ScheduleListChurchComponent implements OnInit {
 
   filterAdmin(query, admin: any[]): any[] {
     const filtered: any[] = [];
-    // tslint:disable-next-line:prefer-for-of
     for (let i = 0; i < admin.length; i++) {
       const adm = admin[i];
       if (adm.name.toLowerCase().indexOf(query.toLowerCase()) === 0) {

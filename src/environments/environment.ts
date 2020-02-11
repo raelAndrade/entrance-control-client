@@ -3,12 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-  /*apiUrl: 'http://localhost:3200',
-
-  tokenWhitelistedDomains: [ /localhost:3200/ ],
-  tokenBlacklistedRoutes: [/\/oauth\/token/]*/
-
+  production: false,
+  apiUrlLocals: 'http://localhost:3000',
+  apiUrlAdministration: 'http://localhost:3100',
+  apiUrlUsers: 'http://localhost:3200'
 };
 
 /*

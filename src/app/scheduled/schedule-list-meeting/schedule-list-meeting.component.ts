@@ -13,8 +13,4 @@ export class ScheduleListMeetingComponent implements OnInit {
   ngOnInit() {
   }
 
-  openMeeting() {
-
-  }
-
 }

@@ -2,18 +2,17 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { Locals } from '../models/locals';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocalsService {
 
-  private readonly API = 'http://localhost:3000/locals';
-
   constructor(private http: HttpClient) { }
 
   list() {
-    return this.http.get<Locals[]>(this.API)
+    return this.http.get<Locals[]>(`${environment.apiUrlLocals}/locals`)
       .pipe(tap(console.log));
   }
 }

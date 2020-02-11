@@ -22,7 +22,10 @@ $(function () {
     height = height - topOffset;
     if (height < 1) height = 1;
     if (height > topOffset) {
-      $(".page-wrapper").css("min-height", (height) + "px");
+      $("#page-wrapper").css("min-height", (height) + "px");
+    } else if (height > topOffset) {
+      $("#page-wrapper").css("margin-left", 0 + "px");
+      $("#page-wrapper").css("background-color", "#fff");
     }
   });
 

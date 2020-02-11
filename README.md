@@ -44,13 +44,13 @@ Você também pode usar o seguinte comando `ng generate directive|pipe|service|c
 
   ##### Administrations
 
-  + Execute o comando `json-server --watch administration.json --port 3001` . O arquivo `administration.json` contém a estrutura do arquivo que será gerado um json
+  + Execute o comando `json-server --watch administration.json --port 3100` . O arquivo `administration.json` contém a estrutura do arquivo que será gerado um json
   + URL: http://localhost:3100/administrations
 
   ##### User
 
-  + Execute o comando `json-server users.json -m node_modules/json-server-auth --port 3300` O arquivo `users.json` contém a estrutura do arquivo que será gerado um json
-  + URL: http://localhost:3300/users
+  + Execute o comando `json-server users.json -m node_modules/json-server-auth --port 3200` O arquivo `users.json` contém a estrutura do arquivo que será gerado um json
+  + URL: http://localhost:3200/users
 
 ## Plugin REST Client
 

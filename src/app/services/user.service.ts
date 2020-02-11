@@ -1,38 +1,33 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { API } from './user.api';
-import { User } from '../models/user.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  login(user: User) {
-    return this.http.post(`${API}/signin/`, user);
-  }
+  /*login(user: User) {
+  this.http.post<{ access_token: string }>(`${environment.apiUrlUsers}/login`, { name, password }).pipe(tap(res => {
 
-  createOrUpdate(user: User) {
-    if (user.id != null && user.id !== '') {
-      return this.http.put(`${API}/users`, user);
+    if (user.name === name && user.password === password) {
+      this.userAuthenticate = true;
+      this.showMenuEmitter.emit(true);
+      this.router.navigate(['/']);
     } else {
-      user.id = null;
-      return this.http.post(`${API}/users`, user);
+      this.userAuthenticate = false;
+      this.showMenuEmitter.emit(false);
     }
-  }
 
-  findAll(page: number, count: number) {
-    return this.http.get(`${API}/users/${page}/${count}`);
-  }
+    localStorage.setItem('access_token', res.access_token);
+  }))
+  }*/
 
-  findById(id: string) {
-    return this.http.get(`${API}/users/${id}`);
-  }
+  /* logout() {
+    localStorage.removeItem('access_token');
+  } */
 
-  delete(id: string) {
-    return this.http.delete(`${API}/users/${id}`);
-  }
+  /* public get loggedIn(): boolean {
+    return localStorage.getItem('access_token') !== null;
+  } */
 
 }

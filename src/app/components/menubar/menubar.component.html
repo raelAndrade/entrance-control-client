@@ -6,47 +6,100 @@
       </li>
 
       <!-- SCHEDULE -->
-      <!-- <li *ngIf="shared.user.profile == 'ADM'"> -->
-        <li>
-          <a href="#"><i class="fa fa-calendar"></i> Agendamendos<span class="fa arrow"></span></a>
-          <ul class="nav nav-second-level">
-            <li>
-              <a class="nav-item nav-link" href="agendamento/listaIgrejas"><i class="fa fa-list-alt fa-fw"></i> Listar Igrejas</a>
-            </li>
-            <li>
-              <a class="nav-item nav-link" href="agendamento/listaAgendamentos"><i class="fa fa-list-alt fa-fw"></i> Listar Agendamentos</a>
-            </li>
-          </ul>
-        </li>
+      <!-- <li *ngIf="user.role == 'ADMIN'"> -->
+      <!-- <li *ngIf="isAdmin"> -->
+      <li>
+        <a href="#"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i> Agendamendos<span
+            class="fa arrow"></span></a>
+        <ul class="nav nav-second-level">
+          <li>
+            <a class="nav-item nav-link" href="agendamento/listaIgrejas">
+              <i class="fa fa-list" aria-hidden="true"></i> Listar
+              Igrejas</a>
+          </li>
+          <li>
+            <a class="nav-item nav-link" href="agendamento/listaAgendamentos"><i class="fa fa-list-alt"
+                aria-hidden="true"></i>
+              Listar Agendamentos</a>
+          </li>
+        </ul>
+      </li>
 
       <!-- MEETINGS -->
-      <!-- <li *ngIf="shared.user.profile == 'ADM'"> -->
+      <!-- <li *ngIf="user.role == 'ADMIN'"> -->
+      <!--  <li *ngIf="isAdmin"> -->
       <li>
         <a href="#"><i class="fa fa-group fa-fw"></i> Reuniões<span class="fa arrow"></span></a>
         <ul class="nav nav-second-level">
           <li>
-            <a class="nav-item nav-link" href="reuniao/listarReunioes"><i class="fa fa-list-alt fa-fw"></i> Listar Reuniões</a>
+            <a class="nav-item nav-link" href="reuniao/listarReunioes"><i class="fa fa-list" aria-hidden="true"></i>
+              Listar Reuniões</a>
           </li>
           <li>
-            <a class="nav-item nav-link" href="reuniao/relatorio"><i class="fa fa-file-text-o fa-fw"></i>
+            <a class="nav-item nav-link" href="reuniao/relatorio"><i class="fa fa-bar-chart" aria-hidden="true"></i>
               Relatório</a>
           </li>
         </ul>
       </li>
 
       <!-- LOCALS -->
-      <!-- <li *ngIf="shared.user.profile == 'ADM'"> -->
+      <!-- <li *ngIf="user.role == 'ADMIN'"> -->
       <li>
         <a href="#"><i class="fa fa-map-marker"></i> Locais<span class="fa arrow"></span></a>
         <ul class="nav nav-second-level">
           <li>
-            <a class="nav-item nav-link" href="locais/lista"><i class="fa fa-list-alt fa-fw"></i> Regional</a>
+            <a href="#"><i class="fa fa-university fa-fw" aria-hidden="true"></i> Regionais<span
+                class="fa arrow"></span></a>
+            <ul class="nav nav-third-level">
+              <li>
+                <a class="nav-item nav-link" href="#"><i class="fa fa-plus" aria-hidden="true"></i> Cadastrar
+                  Regional</a>
+              </li>
+              <li>
+                <a class="nav-item nav-link" href="#"><i class="fa fa-list" aria-hidden="true"></i>
+                  Listar Regionais</a>
+              </li>
+            </ul>
           </li>
           <li>
-            <a class="nav-item nav-link" href="locais/novo"><i class="fa fa-edit fa-fw"></i> Administração</a>
+            <a href="#"><i class="fa fa-building" aria-hidden="true"></i> Administrações<span
+                class="fa arrow"></span></a>
+            <ul class="nav nav-third-level">
+              <li>
+                <a class="nav-item nav-link" href="#"><i class="fa fa-plus" aria-hidden="true"></i>
+                  Cadastrar Administração</a>
+              </li>
+              <li>
+                <a class="nav-item nav-link" href="#"><i class="fa fa-list" aria-hidden="true"></i>
+                  Listar Administrações</a>
+              </li>
+            </ul>
           </li>
           <li>
-            <a class="nav-item nav-link" href="locais/relatorio"><i class="fa fa-file-text-o fa-fw"></i> Igrejas</a>
+            <a href="#"><i class="fa fa-home fa-fw" aria-hidden="true"></i> Igrejas<span class="fa arrow"></span></a>
+            <ul class="nav nav-third-level">
+              <li>
+                <a class="nav-item nav-link" href="#"><i class="fa fa-plus" aria-hidden="true"></i>
+                  Cadastrar Igreja</a>
+              </li>
+              <li>
+                <a class="nav-item nav-link" href="#"><i class="fa fa-list" aria-hidden="true"></i>
+                  Listar Igrejas</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-hotel fa-fw" aria-hidden="true"></i> Salões<span class="fa arrow"></span></a>
+            <ul class="nav nav-third-level">
+              <li>
+                <a class="nav-item nav-link" href="#"><i class="fa fa-plus" aria-hidden="true"></i>
+                  Cadastrar Salão</a>
+              </li>
+              <li>
+                <a class="nav-item nav-link" href="#"><i class="fa fa-list" aria-hidden="true"></i>
+                  Listar Salões</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </li>
@@ -122,21 +175,3 @@
     </ul>
   </div>
 </div>
-
-
-
-<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#">CCB</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" [routerLink]="['/']" routerLinkActive="active">Home <span
-          class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" [routerLink]="['/locals']" routerLinkActive="active">Locais</a>
-      <a class="nav-item nav-link" [routerLink]="['/meeting']" routerLinkActive="active">Reuniões</a>
-    </div>
-  </div>
-</nav> -->

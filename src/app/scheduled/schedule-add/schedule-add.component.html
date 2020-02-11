@@ -5,7 +5,6 @@
 <hr />
 
 <form>
-
   <p-fieldset legend="Dados do local">
     <div class="ui-g ui-fluid">
       <div class="form-group ui-g-6">
@@ -25,13 +24,9 @@
 
   <p-fieldset legend="Administração">
     <div class="ui-g ui-fluid">
-      <div class="ui-g-1">
-        <label for="descricao">ADM</label>
-      </div>
-      <div class="ui-g-11">
-        <p-autoComplete field="name" [size]="30" placeholder="Administração" [minLength]="1"
-          [suggestions]="filteredAdminSingle" (completeMethod)="filterAdminSingle($event)">
-        </p-autoComplete>
+      <div class="ui-g-12">
+        <label for="descricao">ADMINISTRAÇÃO: </label>
+        <span style="padding: 5px;">Guaratinguetá</span>
       </div>
     </div>
   </p-fieldset>

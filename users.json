@@ -1,25 +1,17 @@
 {
-  "users": [
-    {
+  "users": [{
       "email": "israel@teste.com",
-      "password": "$2a$10$M9ioCskSe0cz88VvUEz2A.ptdfykEAWieVkyna1KrcHb6HBlJSTPq",
+      "password": "$2a$10$XfQhTku1qyVc/AJjdxjJlOkU7wk3MG8C.xnISlefnRvZ910od2Fg2",
       "name": "israel",
-      "profile": "ADM",
+      "role": "ADMIN",
       "id": 1
     },
     {
       "email": "jether@teste.com",
-      "password": "$2a$10$7sCbD89aVoCdWREqol9AhOx5Wt.OsoDoUM7kkqDt5CsBzxnyKMdy.",
+      "password": "$2a$10$YoUwt1isDxK0x9lYYI2ie.UYd3OYSAnpwS9.6Y7bItF9K9lSIRuYi",
       "name": "jether",
-      "profile": "COMUM",
+      "role": "USER",
       "id": 2
-    },
-    {
-      "email": "admin@helpdesk.com",
-      "password": "$2a$10$AJEkVBGJ8B/VwRf0.cAilusDFuODNyUI8.UWW.Q6t7S.3/IbeNYBi",
-      "id": 3,
-      "name": "",
-      "profile": ""
     }
   ]
 }

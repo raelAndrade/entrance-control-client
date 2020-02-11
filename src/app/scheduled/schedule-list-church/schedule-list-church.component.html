@@ -30,9 +30,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td class="text-center">123456</td>
-      <td class="text-center">Guaratinguetá</td>
+    <tr *ngFor="let local of locals">
+      <td class="text-center">{{local.id}}</td>
+      <td class="text-center">{{local.initial}}</td>
       <td class="text-center">
         <button pButton type="button" label="Cadastrar reunião" (click)="registerMeeting()"></button>
       </td>
