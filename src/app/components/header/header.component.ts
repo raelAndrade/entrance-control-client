@@ -13,18 +13,18 @@ export class HeaderComponent implements OnInit {
   public shared: SharedService;
 
   constructor() {
-    this.shared = SharedService.getInstance();
-    this.shared.user = new User();
+   /*  this.shared = SharedService.getInstance();
+    this.shared.user = new User(); */
   }
 
   ngOnInit() {
   }
 
-  signOut() {
+  /* signOut() {
     this.shared.token = null;
     this.shared.user = null;
     window.location.href = '/login';
     window.location.reload();
-  }
+  } */
 
 }

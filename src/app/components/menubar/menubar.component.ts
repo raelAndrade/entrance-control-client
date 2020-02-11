@@ -11,7 +11,7 @@ export class MenubarComponent implements OnInit {
   shared: SharedService;
 
   constructor() {
-    this.shared = SharedService.getInstance();
+    /* this.shared = SharedService.getInstance(); */
   }
 
   ngOnInit() { }

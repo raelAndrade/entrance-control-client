@@ -10,20 +10,20 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  login(user: User) {
+  /* login(user: User) {
     return this.http.post(`${API}/signin/`, user);
-  }
+  } */
 
-  createOrUpdate(user: User) {
+  /* createOrUpdate(user: User) {
     if (user.id != null && user.id !== '') {
       return this.http.put(`${API}/users`, user);
     } else {
       user.id = null;
       return this.http.post(`${API}/users`, user);
     }
-  }
+  } */
 
-  findAll(page: number, count: number) {
+  /* findAll(page: number, count: number) {
     return this.http.get(`${API}/users/${page}/${count}`);
   }
 
@@ -33,6 +33,6 @@ export class UserService {
 
   delete(id: string) {
     return this.http.delete(`${API}/users/${id}`);
-  }
+  } */
 
 }

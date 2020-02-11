@@ -1,14 +1,14 @@
 <!-- [hidden]="!showTemplate" -->
-<app-header [hidden]="!showTemplate"></app-header>
+<app-header *ngIf="showMenu"></app-header>
 
-<app-menubar [hidden]="!showTemplate"></app-menubar>
+<app-menubar *ngIf="showMenu"></app-menubar>
 
 <div class="wrapper">
 
-  <div [ngClass]="showWrapper()">
+  <div id="page-wrapper">
     <router-outlet></router-outlet>
   </div>
 
 </div>
 
-<app-footer [hidden]="!showTemplate"></app-footer>
+<app-footer *ngIf="showMenu"></app-footer>
