@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { LocalsRegionalsAddComponent } from './locals-regionals/locals-regionals-add/locals-regionals-add.component';
 import { LocalsRegionalsListComponent } from './locals-regionals/locals-regionals-list/locals-regionals-list.component';
 import { LocalsAdministrationAddComponent } from './locals-administration/locals-administration-add/locals-administration-add.component';

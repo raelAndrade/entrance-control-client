@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 import { Locals } from 'src/app/models/locals';
 
 @Injectable()
-export class LocalsGuard implements CanActivateChild, Resolve<Locals> {
+export class LocalsGuard implements CanActivateChild {
 
   canActivateChild(
     route: ActivatedRouteSnapshot,
@@ -15,11 +15,11 @@ export class LocalsGuard implements CanActivateChild, Resolve<Locals> {
     return true;
   }
 
-  resolve(
+  /* resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<any> | Promise<any> | any {
     return true;
-  }
+  } */
 
 }

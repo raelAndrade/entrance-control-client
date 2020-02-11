@@ -25,9 +25,12 @@ import { LocalsRegionalsListComponent } from './locals-regionals/locals-regional
 import { LocalsRoowsAddComponent } from './locals-roows/locals-roows-add/locals-roows-add.component';
 import { LocalsRoowsListComponent } from './locals-roows/locals-roows-list/locals-roows-list.component';
 
+import { LocalsRoutingModule } from './locals.routing.module';
+
 @NgModule({
   imports: [
     CommonModule,
+    LocalsRoutingModule,
     MessagesModule,
     PanelModule,
     TableModule,
@@ -40,7 +43,6 @@ import { LocalsRoowsListComponent } from './locals-roows/locals-roows-list/local
     CheckboxModule,
     SelectButtonModule,
     ToggleButtonModule,
-
   ],
   exports: [],
   declarations: [

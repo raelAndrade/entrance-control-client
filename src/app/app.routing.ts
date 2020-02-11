@@ -1,4 +1,4 @@
-import { Routes, RouterModule } from '@angular/router';
+/* import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 
 import { ScheduleAddComponent } from './scheduled/schedule-add/schedule-add.component';
@@ -26,3 +26,4 @@ const APP_ROUTES: Routes = [
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(APP_ROUTES);
+ */

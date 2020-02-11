@@ -34,13 +34,15 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/security/login/login.component';
 
+import { environment } from '../environments/environment';
+
 import { AuthService } from './components/security/auth.service';
 
 import { AuthGuard } from './components/guards/auth.guard';
 import { ScheduledGuard } from './scheduled/guards/scheduled.guard';
 import { MeetingsGuard } from './meetings/guards/meetings.guard';
+import { LocalsGuard } from './locals/guards/locals.guard';
 
-import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -87,7 +89,8 @@ import { environment } from 'src/environments/environment';
     AuthGuard,
     AuthService,
     MeetingsGuard,
-    ScheduledGuard
+    ScheduledGuard,
+    LocalsGuard
   ],
   bootstrap: [AppComponent]
 })

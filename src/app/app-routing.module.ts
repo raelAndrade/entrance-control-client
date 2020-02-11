@@ -1,12 +1,14 @@
 import { Routes, RouterModule } from '@angular/router';
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 import { LoginComponent } from './components/security/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { AuthGuard } from './components/guards/auth.guard';
+
 import { ScheduledGuard } from './scheduled/guards/scheduled.guard';
 import { MeetingsGuard } from './meetings/guards/meetings.guard';
+import { LocalsGuard } from './locals/guards/locals.guard';
 
 
 export const appRoutes: Routes = [
@@ -24,9 +26,15 @@ export const appRoutes: Routes = [
     canActivateChild: [ScheduledGuard],
     canLoad: [AuthGuard]
   },
+  {
+    path: 'locais',
+    loadChildren: './locals/locals.module#LocalsModule',
+    canActivate: [AuthGuard],
+    canActivateChild: [LocalsGuard],
+    canLoad: [AuthGuard]
+  },
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({
