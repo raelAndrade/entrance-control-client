@@ -1,18 +1,14 @@
 <!-- [hidden]="!showTemplate" -->
-<app-header [hidden]="!showTemplate"></app-header>
+<app-header></app-header>
 
-<app-menubar [hidden]="!showTemplate"></app-menubar>
+<app-menubar></app-menubar>
 
 <div id="wrapper">
 
   <div id="page-wrapper">
-    
-  </div>
-  
-  <div class="container">
     <router-outlet></router-outlet>
   </div>
 
 </div>
 
-<app-footer [hidden]="!showTemplate"></app-footer>
+<app-footer></app-footer>

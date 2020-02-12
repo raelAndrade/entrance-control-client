@@ -4,31 +4,21 @@ import { HttpClient } from '@angular/common/http';
 import { User } from 'src/app/models/user.model';
 
 import { environment } from 'src/environments/environment';
+import { tap } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
-@Injectable({ providedIn: 'root' })
+@Injectable()
 export class UserService {
 
-  constructor(private http: HttpClient) { }
-
-  login(user: User) {
-    return this.http.post(`${environment.apiUrlUsers}/login`, user);
-  }
+  constructor(private http: HttpClient, router: Router) { }
 
   /*login(user: User) {
-  this.http.post<{ access_token: string }>(`${environment.apiUrlUsers}/login`, { name, password }).pipe(tap(res => {
-
-    if (user.name === name && user.password === password) {
-      this.userAuthenticate = true;
-      this.showMenuEmitter.emit(true);
-      this.router.navigate(['/']);
-    } else {
-      this.userAuthenticate = false;
-      this.showMenuEmitter.emit(false);
-    }
-
-    localStorage.setItem('access_token', res.access_token);
-  }))
+    return this.http.post(`${environment.apiUrlUsers}/login`, user);
   }*/
+
+  /* login(user) {
+    return this.http.post<any>(`${environment.apiUrlUsers}/login`, user)
+  } */
 
   /* logout() {
     localStorage.removeItem('access_token');

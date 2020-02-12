@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
 
 /* Módulos dos components */
@@ -44,6 +44,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { ScheduledGuard } from './scheduled/guards/scheduled.guard';
 import { MeetingsGuard } from './meetings/guards/meetings.guard';
 import { LocalsGuard } from './locals/guards/locals.guard';
+import { InterceptorService } from './security/interceptor.service';
 
 
 @NgModule({
@@ -76,6 +77,7 @@ import { LocalsGuard } from './locals/guards/locals.guard';
     MeetingsModule,
     ScheduledModule,
     LocalsModule,
+    AppRoutingModule,
     /*JwtModule.forRoot({
       config: {
         tokenGetter: function tokenGetter() {
@@ -85,7 +87,6 @@ import { LocalsGuard } from './locals/guards/locals.guard';
         blacklistedRoutes: [`${environment.apiUrlUsers}/login`]
       }
     }),*/
-    AppRoutingModule,
   ],
   providers: [
     AuthGuard,
@@ -94,7 +95,12 @@ import { LocalsGuard } from './locals/guards/locals.guard';
     ScheduledGuard,
     LocalsGuard,
     UserService,
-    SharedService
+    SharedService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

@@ -18,9 +18,10 @@ export class LoginComponent implements OnInit {
   /* private user: User = new User(); */
 
   showMenu = false;
-  user = new User(null, '', '', '', '');
+  /* user = new User(null, '', '', '', ''); */
   shared: SharedService;
   message: string;
+  user = {};
 
   constructor(private authService: AuthService, private router: Router, private userService: UserService) {
     this.shared = SharedService.getInstance();
@@ -30,6 +31,16 @@ export class LoginComponent implements OnInit {
     /* this.authService.showMenuEmitter.subscribe(
       mostrar => this.showMenu = mostrar
     ); */
+  }
+
+  login() {
+    this.authService.login(this.user).subscribe(
+      res => {
+        localStorage.setItem('token', res.token)
+        this.router.navigate([''])
+      }, err =>
+      this.router.navigate(['/login'])
+    )
   }
 
   /* login() {
@@ -43,7 +54,7 @@ export class LoginComponent implements OnInit {
     this.authService.logout();
   } */
 
-  login() {
+  /* login() {
     this.message = '';
     this.userService.login(this.user).subscribe((userAuthentication: CurrentUser) => {
       this.shared.token = userAuthentication.token;
@@ -56,13 +67,13 @@ export class LoginComponent implements OnInit {
       this.shared.showTemplate.emit(false);
       this.message = 'Erro';
     });
-  }
+  } */
 
-  cancelLogin() {
+  /* cancelLogin() {
     this.message = '';
     this.user = new User(null, '', '', '', '');
     window.location.href = '/login';
     window.location.reload();
-  }
+  } */
 
 }

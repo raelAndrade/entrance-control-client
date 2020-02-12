@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { SelectItem } from 'primeng/api';
-import { Saloes } from 'src/app/models/saloes';
-import { AdmService } from 'src/app/services/adm.service';
-import { Administrations } from 'src/app/models/administration.model';
+
+import { Saloes } from '../../models/saloes';
+import { AdmService } from '../../services/adm.service';
+import { Administrations } from '../../models/administration.model';
 
 @Component({
   selector: 'app-meetings-add',
