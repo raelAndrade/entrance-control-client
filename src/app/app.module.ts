@@ -6,8 +6,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
 
 /* Módulos dos components */
-import { MeetingsModule } from './meetings/meetings.module';
-import { ScheduledModule } from './scheduled/scheduled.module';
+import { MeetingsModule } from './meeting/meetings.module';
+import { ScheduledModule } from './schedule/scheduled.module';
 import { LocalsModule } from './locals/locals.module';
 
 /* Componentes PrimeNG */
@@ -34,15 +34,13 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './security/login/login.component';
 
-import { environment } from '../environments/environment';
-
 import { AuthService } from './security/auth.service';
 import { SharedService } from './services/shared.service';
 import { UserService } from './services/user.service';
 
 import { AuthGuard } from './guards/auth.guard';
-import { ScheduledGuard } from './scheduled/guards/scheduled.guard';
-import { MeetingsGuard } from './meetings/guards/meetings.guard';
+import { ScheduledGuard } from './schedule/guards/scheduled.guard';
+import { MeetingsGuard } from './meeting/guards/meetings.guard';
 import { LocalsGuard } from './locals/guards/locals.guard';
 import { InterceptorService } from './security/interceptor.service';
 
@@ -78,15 +76,6 @@ import { InterceptorService } from './security/interceptor.service';
     ScheduledModule,
     LocalsModule,
     AppRoutingModule,
-    /*JwtModule.forRoot({
-      config: {
-        tokenGetter: function tokenGetter() {
-          return localStorage.getItem('access_token');
-        },
-        whitelistedDomains: ['localhost:3000'],
-        blacklistedRoutes: [`${environment.apiUrlUsers}/login`]
-      }
-    }),*/
   ],
   providers: [
     AuthGuard,
