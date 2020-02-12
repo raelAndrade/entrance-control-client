@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Administrations } from 'src/app/models/admin';
+import { Administrations } from 'src/app/models/administration.model';
 import { AdmService } from 'src/app/services/adm.service';
 
 @Component({

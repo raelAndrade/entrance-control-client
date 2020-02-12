@@ -3,7 +3,7 @@ import { SelectItem } from 'primeng/api';
 import { Grupos } from 'src/app/models/grupos';
 import { Saloes } from 'src/app/models/saloes';
 import { AdmService } from 'src/app/services/adm.service';
-import { Administrations } from 'src/app/models/admin';
+import { Administrations } from 'src/app/models/administration.model';
 
 @Component({
   selector: 'app-meetings-add',

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Locals } from 'src/app/models/locals';
-import { Administrations } from 'src/app/models/admin';
+import { Administrations } from 'src/app/models/administration.model';
 import { LocalsService } from 'src/app/services/locals.service';
 import { AdmService } from 'src/app/services/adm.service';
 import { Router } from '@angular/router';

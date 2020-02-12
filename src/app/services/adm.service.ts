@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
-import { Administrations } from '../models/admin';
+import { Administrations } from '../models/administration.model';
 import { environment } from 'src/environments/environment';
 
 @Injectable({

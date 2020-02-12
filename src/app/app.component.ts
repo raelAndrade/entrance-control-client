@@ -15,7 +15,6 @@ export class AppComponent {
 
   constructor(private authService: AuthService) { }
 
-  // tslint:disable-next-line:use-lifecycle-interface
   ngOnInit() {
     /* this.authService.showMenuEmitter.subscribe(
       mostrar => this.showMenu = mostrar
