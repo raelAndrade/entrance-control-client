@@ -2,14 +2,23 @@
   "users": [{
       "email": "israel@teste.com",
       "password": "$2a$10$XfQhTku1qyVc/AJjdxjJlOkU7wk3MG8C.xnISlefnRvZ910od2Fg2",
+      "name": "Israel",
       "profile": "ADMIN",
       "id": 1
     },
     {
       "email": "jether@teste.com",
       "password": "$2a$10$YoUwt1isDxK0x9lYYI2ie.UYd3OYSAnpwS9.6Y7bItF9K9lSIRuYi",
+      "name": "jether",
       "profile": "USER",
       "id": 2
+    },
+    {
+      "email": "davi@teste.com",
+      "password": "$2a$10$fNvTog1XftW6kQNp75R2cefAa9Iu81JZBMCUx.4P.C2kGh8ksYlTq",
+      "name": "davi",
+      "profile": "USER",
+      "id": 3
     }
   ]
 }

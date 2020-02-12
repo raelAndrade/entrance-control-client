@@ -14,11 +14,20 @@ GET http://{{hostname}}:{{port}}/{{name}}/1
 
 ###
 
-POST http://localhost:3200/register HTTP/1.1
+POST http://{{hostname}}:{{port}}/register HTTP/1.1
+content-type: application/json
 {
   "email": "israel@teste.com",
   "password": "123456",
-  "name": "israel",
   "profile": "ADMIN"
 }
 
+###
+
+POST http://localhost:3200/login
+content-type: application/json
+
+{
+  "email": "israel@teste.com",
+  "password": "123456",
+}
