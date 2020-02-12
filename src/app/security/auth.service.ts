@@ -1,9 +1,8 @@
 import { Router } from '@angular/router';
-import { Injectable, EventEmitter } from '@angular/core';
-
-import { User } from '../models/user.model';
-import { environment } from 'src/environments/environment';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class AuthService {
@@ -15,7 +14,7 @@ export class AuthService {
   }
 
   loggedIn() {
-    return !!localStorage.getItem('token')
+    return !localStorage.getItem('token')
   }
 
   getToken() {
@@ -30,26 +29,4 @@ export class AuthService {
   registerUser(user) {
     return this.http.post<any>(`${environment.apiUrlUsers}/register`, user)
   }
-
-  /* private userAuthenticate = false;
-  showMenuEmitter = new EventEmitter<boolean>(); */
-
-  /* login(user: User) {
-    if (user.name === 'user@teste.com' && user.password === '123456') {
-      this.userAuthenticate = true;
-      this.showMenuEmitter.emit(true);
-      this.router.navigate(['/']);
-    } else {
-      this.userAuthenticate = false;
-      this.showMenuEmitter.emit(false);
-    }
-  } */
-
-  /* userIsAuthenticate() {
-    return this.userAuthenticate;
-  } */
-
-  /* logout() {
-    this.router.navigate(['/login']);
-  } */
 }
