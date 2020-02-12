@@ -4,8 +4,7 @@ import { NgModule } from '@angular/core';
 import { LoginComponent } from './security/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 
-import { AuthGuard } from './components/guards/auth.guard';
-
+import { AuthGuard } from './guards/auth.guard';
 import { ScheduledGuard } from './scheduled/guards/scheduled.guard';
 import { MeetingsGuard } from './meetings/guards/meetings.guard';
 import { LocalsGuard } from './locals/guards/locals.guard';

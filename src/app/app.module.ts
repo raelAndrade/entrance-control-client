@@ -40,7 +40,7 @@ import { AuthService } from './security/auth.service';
 import { SharedService } from './services/shared.service';
 import { UserService } from './services/user.service';
 
-import { AuthGuard } from './components/guards/auth.guard';
+import { AuthGuard } from './guards/auth.guard';
 import { ScheduledGuard } from './scheduled/guards/scheduled.guard';
 import { MeetingsGuard } from './meetings/guards/meetings.guard';
 import { LocalsGuard } from './locals/guards/locals.guard';

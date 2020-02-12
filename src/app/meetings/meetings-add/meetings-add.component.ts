@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { SelectItem } from 'primeng/api';
-import { Grupos } from 'src/app/models/grupos';
 import { Saloes } from 'src/app/models/saloes';
 import { AdmService } from 'src/app/services/adm.service';
 import { Administrations } from 'src/app/models/administration.model';
@@ -14,20 +13,12 @@ import { Administrations } from 'src/app/models/administration.model';
 
 export class MeetingsAddComponent implements OnInit {
 
-  grupos: Grupos[];
   saloes: Saloes[];
   adm: any;
   admin: Administrations[] = [];
   filteredAdministration: any[];
 
   constructor(private service: AdmService) {
-    this.grupos = [
-      { name: 'Selecione o grupo' },
-      { name: 'Administração' },
-      { name: 'Ministerial' },
-      { name: 'Geral' }
-    ];
-
     this.saloes = [
       { name: 'Selecione o salão' },
       { name: 'Principal' },
