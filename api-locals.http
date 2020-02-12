@@ -1,0 +1,53 @@
+@hostname = localhost
+@port = 3000
+@name = locals
+@createdAt = {{$localDatetime iso8601}}
+@contentType = application/json
+
+###
+
+GET http://{{hostname}}:{{port}}/{{name}}
+
+###
+
+GET http://{{hostname}}:{{port}}/{{name}}/1
+
+###
+
+POST http://localhost:3000/locals HTTP/1.1
+content-type: application/json
+
+{
+  "initial": "RAVAP",
+  "description": "Regional Administrativa do Vale do Paraíba",
+  "administrations": [
+    {
+      "name": "Guaratinguetá",
+      "cnpj": "123.123.123/0001-47",
+      "churches": [
+        {
+          "name": "Vila Passos",
+          "code": "221605",
+          "description": "Congregação Vila Passos",
+          "rooms": [
+            {
+              "name": "Sala Administração Coletas",
+              "description": "Sala Administração de Coletas",
+              "entrances": [
+                "MAIN_ENTRANCE"
+              ],
+              "created": "{{$localDatetime iso8601}}",
+              "updated": "{{$localDatetime iso8601}}"
+            }
+          ],
+          "created": "{{$localDatetime iso8601}}",
+          "updated": "{{$localDatetime iso8601}}"
+        }
+      ],
+      "created": "{{$localDatetime iso8601}}",
+      "updated": "{{$localDatetime iso8601}}"
+    }
+  ],
+  "created": "{{$localDatetime iso8601}}",
+  "updated": "{{$localDatetime iso8601}}"
+}
