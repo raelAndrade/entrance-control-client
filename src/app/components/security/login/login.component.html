@@ -2,19 +2,23 @@
   <div class="row">
     <div class="col-md-4 col-md-offset-4">
       <br /><br />
-      <!-- <img src="../../../../assets/img/logotipo-ccb.png" class="logotipo" /> -->
+      <img src="../../../../assets/img/logotipo-ccb.png" class="logotipo" />
       <br />
       <hr>
       <h4 class="text-center">Fazer login</h4>
-
-      <div class="form-group">
-        <input [(ngModel)]="user.name" id="user" type="text" class="validate form-control">
-      </div>
-      <div class="form-group">
-        <input [(ngModel)]="user.password" id="password" type="password" class="validate form-control">
-      </div>
-      <button pButton type="submit" label="Entrar" (click)="login()"></button>
-
+      <form #form="ngForm" (ngSubmit)="login()">
+        <div class="alert alert-error" role="alert" *ngIf="message">
+          <strong>Nome ou senha inválida</strong>
+        </div>
+        <div class="form-group">
+          <input [(ngModel)]="user.name" id="user" type="text" class="validate form-control" *nome="ngModel" nome>
+        </div>
+        <div class="form-group">
+          <input [(ngModel)]="user.password" id="password" type="password" class="validate form-control">
+        </div>
+        <button pButton type="submit" label="Entrar"></button>
+        <!-- <button pButton type="submit" label="Entrar" (click)="login()"></button> -->
+      </form>  
     </div>
   </div>
 </div>

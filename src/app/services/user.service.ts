@@ -1,10 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { User } from 'src/app/models/user.model';
+
+import { environment } from 'src/environments/environment';
+
 @Injectable({ providedIn: 'root' })
 export class UserService {
 
   constructor(private http: HttpClient) { }
+
+  login(user: User) {
+    return this.http.post(`${environment.apiUrlUsers}/login`, user);
+  }
 
   /*login(user: User) {
   this.http.post<{ access_token: string }>(`${environment.apiUrlUsers}/login`, { name, password }).pipe(tap(res => {

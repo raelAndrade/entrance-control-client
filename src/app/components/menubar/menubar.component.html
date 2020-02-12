@@ -2,14 +2,14 @@
   <div class="sidebar-nav navbar-collapse">
     <ul class="nav" id="side-menu">
       <li>
-        <a href="/" class="active"><i class="fa fa-dashboard fa-fw"></i> Home</a>
+        <a routerLink="" class="active"><i class="fa fa-dashboard fa-fw"></i> Home</a>
       </li>
 
       <!-- SCHEDULE -->
       <!-- <li *ngIf="user.role == 'ADMIN'"> -->
       <!-- <li *ngIf="isAdmin"> -->
       <li>
-        <a href="#"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i> Agendamendos<span
+        <a href=""><i class="fa fa-calendar-minus-o" aria-hidden="true"></i> Agendamendos<span
             class="fa arrow"></span></a>
         <ul class="nav nav-second-level">
           <li>
@@ -29,7 +29,7 @@
       <!-- <li *ngIf="user.role == 'ADMIN'"> -->
       <!--  <li *ngIf="isAdmin"> -->
       <li>
-        <a href="#"><i class="fa fa-group fa-fw"></i> Reuniões<span class="fa arrow"></span></a>
+        <a routerLink=""><i class="fa fa-group fa-fw"></i> Reuniões<span class="fa arrow"></span></a>
         <ul class="nav nav-second-level">
           <li>
             <a class="nav-item nav-link" routerLink="reuniao/listarReunioes" routerLinkActive="active"><i
@@ -47,7 +47,7 @@
       <!-- LOCALS -->
       <!-- <li *ngIf="user.role == 'ADMIN'"> -->
       <li>
-        <a href="#"><i class="fa fa-map-marker"></i> Locais<span class="fa arrow"></span></a>
+        <a routerLink=""><i class="fa fa-map-marker"></i> Locais<span class="fa arrow"></span></a>
         <ul class="nav nav-second-level">
           <li>
             <a href="#"><i class="fa fa-university fa-fw" aria-hidden="true"></i> Regionais<span

@@ -37,6 +37,8 @@ import { LoginComponent } from './components/security/login/login.component';
 import { environment } from '../environments/environment';
 
 import { AuthService } from './components/security/auth.service';
+import { SharedService } from './services/shared.service';
+import { UserService } from './services/user.service';
 
 import { AuthGuard } from './components/guards/auth.guard';
 import { ScheduledGuard } from './scheduled/guards/scheduled.guard';
@@ -74,7 +76,7 @@ import { LocalsGuard } from './locals/guards/locals.guard';
     MeetingsModule,
     ScheduledModule,
     LocalsModule,
-    JwtModule.forRoot({
+    /*JwtModule.forRoot({
       config: {
         tokenGetter: function tokenGetter() {
           return localStorage.getItem('access_token');
@@ -82,7 +84,7 @@ import { LocalsGuard } from './locals/guards/locals.guard';
         whitelistedDomains: ['localhost:3000'],
         blacklistedRoutes: [`${environment.apiUrlUsers}/login`]
       }
-    }),
+    }),*/
     AppRoutingModule,
   ],
   providers: [
@@ -90,7 +92,9 @@ import { LocalsGuard } from './locals/guards/locals.guard';
     AuthService,
     MeetingsGuard,
     ScheduledGuard,
-    LocalsGuard
+    LocalsGuard,
+    UserService,
+    SharedService
   ],
   bootstrap: [AppComponent]
 })

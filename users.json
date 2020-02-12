@@ -2,15 +2,13 @@
   "users": [{
       "email": "israel@teste.com",
       "password": "$2a$10$XfQhTku1qyVc/AJjdxjJlOkU7wk3MG8C.xnISlefnRvZ910od2Fg2",
-      "name": "israel",
-      "role": "ADMIN",
+      "profile": "ADMIN",
       "id": 1
     },
     {
       "email": "jether@teste.com",
       "password": "$2a$10$YoUwt1isDxK0x9lYYI2ie.UYd3OYSAnpwS9.6Y7bItF9K9lSIRuYi",
-      "name": "jether",
-      "role": "USER",
+      "profile": "USER",
       "id": 2
     }
   ]

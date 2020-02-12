@@ -11,10 +11,11 @@ import { AuthService } from './components/security/auth.service';
 export class AppComponent {
   title = 'CCB - Controle de Entradas';
 
-  //showMenu = false;
+  /* showMenu = false; */
 
   constructor(private authService: AuthService) { }
 
+  // tslint:disable-next-line:use-lifecycle-interface
   ngOnInit() {
     /* this.authService.showMenuEmitter.subscribe(
       mostrar => this.showMenu = mostrar

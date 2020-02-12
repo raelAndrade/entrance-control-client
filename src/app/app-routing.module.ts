@@ -33,8 +33,13 @@ export const appRoutes: Routes = [
     canActivateChild: [LocalsGuard],
     canLoad: [AuthGuard]
   },
-  { path: 'login', component: LoginComponent },
-  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'login',
+    component: LoginComponent
+  },
+  { path: '',
+    component: HomeComponent,
+    canActivate: [AuthGuard]
+  },
 ];
 
 @NgModule({

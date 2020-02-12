@@ -14,7 +14,6 @@ export class AuthGuard implements CanActivate, CanLoad {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean> | boolean {
-    console.log('AuthGuard');
     return this.verifyAccess();
   }
 
@@ -23,7 +22,6 @@ export class AuthGuard implements CanActivate, CanLoad {
       return true;
     }
     this.router.navigate(['/login']);
-    return false;
   }
 
   canLoad(route: Route): Observable<boolean> | Promise<boolean> | boolean {
