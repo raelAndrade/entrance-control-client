@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router, CanLoad, Route } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { AuthService } from './../components/security/auth.service';
+import { AuthService } from '../security/auth.service';
 
 @Injectable()
 export class AuthGuard implements CanActivate, CanLoad {
@@ -27,9 +27,9 @@ export class AuthGuard implements CanActivate, CanLoad {
     return false;
   }
 
-    canLoad(route: Route): Observable<boolean>|Promise<boolean>|boolean {
-        console.log('canLoad: verificando se usuário pode carregar o cod módulo');
-        return this.verifyAccess();
-    }
+  canLoad(route: Route): Observable<boolean> | Promise<boolean> | boolean {
+    console.log('canLoad: verificando se usuário pode carregar o cod módulo');
+    return this.verifyAccess();
+  }
 
 }

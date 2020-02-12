@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { Injectable, EventEmitter } from '@angular/core';
 
-import { User } from './../../models/user.model';
+import { User } from '../models/user.model';
 
 @Injectable()
 export class AuthService {

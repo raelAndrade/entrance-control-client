@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { LoginComponent } from './components/security/login/login.component';
+import { LoginComponent } from './security/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { AuthGuard } from './components/guards/auth.guard';
@@ -33,10 +33,12 @@ export const appRoutes: Routes = [
     canActivateChild: [LocalsGuard],
     canLoad: [AuthGuard]
   },
-  { path: 'login',
+  {
+    path: 'login',
     component: LoginComponent
   },
-  { path: '',
+  {
+    path: '',
     component: HomeComponent,
     canActivate: [AuthGuard]
   },

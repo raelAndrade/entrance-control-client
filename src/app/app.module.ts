@@ -32,11 +32,11 @@ import { HeaderComponent } from '../app/components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/security/login/login.component';
+import { LoginComponent } from './security/login/login.component';
 
 import { environment } from '../environments/environment';
 
-import { AuthService } from './components/security/auth.service';
+import { AuthService } from './security/auth.service';
 import { SharedService } from './services/shared.service';
 import { UserService } from './services/user.service';
 
