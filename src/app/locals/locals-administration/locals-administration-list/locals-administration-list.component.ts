@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-locals-administration-list',
   templateUrl: './locals-administration-list.component.html',
-  styleUrls: ['./locals-administration-list.component.css']
+  styleUrls: ['./locals-administration-list.component.css'],
+  preserveWhitespaces: true
 })
 export class LocalsAdministrationListComponent implements OnInit {
 

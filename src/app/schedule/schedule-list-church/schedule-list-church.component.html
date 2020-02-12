@@ -1,41 +1,45 @@
-<br /><br /><br />
+<div class="container-fluid">
 
-<h1>Listar Igrejas</h1>
+  <br /><br /><br />
 
-<hr>
+  <h1>Listar Igrejas</h1>
 
-<div class="ui-g ui-fluid">
-  <div class="ui-g-12">
-    <label for="cordigo">Regional: </label>
-    <p-autoComplete [suggestions]="filteredAdministration" (completeMethod)="filterAdministration($event)" field="name"
-      [size]="30" [minLength]="1" id="administracao"></p-autoComplete>
+  <hr>
+
+  <div class="ui-g ui-fluid">
+    <div class="ui-g-12">
+      <label for="cordigo">Regional: </label>
+      <p-autoComplete [suggestions]="filteredAdministration" (completeMethod)="filterAdministration($event)"
+        field="name" [size]="30" [minLength]="1" id="administracao"></p-autoComplete>
+    </div>
+
+    <div class="ui-g-12">
+      <label for="cordigo">Administração: </label>
+      <p-autoComplete [suggestions]="filteredAdministration" (completeMethod)="filterAdministration($event)"
+        field="name" [size]="30" [minLength]="1" id="administracao"></p-autoComplete>
+    </div>
+
   </div>
 
-  <div class="ui-g-12">
-    <label for="cordigo">Administração: </label>
-    <p-autoComplete [suggestions]="filteredAdministration" (completeMethod)="filterAdministration($event)" field="name"
-      [size]="30" [minLength]="1" id="administracao"></p-autoComplete>
-  </div>
+  <br /><br />
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="text-center">Código Relatório</th>
+        <th class="text-center">Nome</th>
+        <th class="text-center">Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let local of locals">
+        <td class="text-center">{{local.id}}</td>
+        <td class="text-center">{{local.initial}}</td>
+        <td class="text-center">
+          <button pButton type="button" label="Cadastrar reunião" (click)="registerMeeting()"></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
 </div>
-
-<br /><br />
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th class="text-center">Código Relatório</th>
-      <th class="text-center">Nome</th>
-      <th class="text-center">Ação</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let local of locals">
-      <td class="text-center">{{local.id}}</td>
-      <td class="text-center">{{local.initial}}</td>
-      <td class="text-center">
-        <button pButton type="button" label="Cadastrar reunião" (click)="registerMeeting()"></button>
-      </td>
-    </tr>
-  </tbody>
-</table>

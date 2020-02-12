@@ -1,43 +1,47 @@
-<br /><br /><br />
+<div class="container-fluid">
 
-<h1>Agendar Reunião</h1>
+  <br /><br /><br />
 
-<hr />
+  <h1>Agendar Reunião</h1>
 
-<form>
-  <p-fieldset legend="Dados do local">
-    <div class="ui-g ui-fluid">
-      <div class="form-group ui-g-6">
-        <label for="igreja">Local: </label>
-        <input type="text" pInputText class="form-control" id="igreja" />
+  <hr />
+
+  <form>
+    <p-fieldset legend="Dados do local">
+      <div class="ui-g ui-fluid">
+        <div class="form-group ui-g-6">
+          <label for="igreja">Local: </label>
+          <input type="text" pInputText class="form-control" id="igreja" />
+        </div>
+        <div class="form-group ui-g-6">
+          <label for="salao">Data: </label>
+          <p-calendar [showIcon]="true" id="date"></p-calendar>
+        </div>
+        <div class="form-group ui-g-12">
+          <label for="descricao">Descrição: </label>
+          <input type="text" pInputText class="form-control" id="descricao" />
+        </div>
       </div>
-      <div class="form-group ui-g-6">
-        <label for="salao">Data: </label>
-        <p-calendar [showIcon]="true" id="date"></p-calendar>
+    </p-fieldset>
+
+    <p-fieldset legend="Administração">
+      <div class="ui-g ui-fluid">
+        <div class="ui-g-12">
+          <label for="descricao">ADMINISTRAÇÃO: </label>
+          <span style="padding: 5px;">Guaratinguetá</span>
+        </div>
       </div>
-      <div class="form-group ui-g-12">
-        <label for="descricao">Descrição: </label>
-        <input type="text" pInputText class="form-control" id="descricao" />
-      </div>
-    </div>
-  </p-fieldset>
+    </p-fieldset>
 
-  <p-fieldset legend="Administração">
-    <div class="ui-g ui-fluid">
-      <div class="ui-g-12">
-        <label for="descricao">ADMINISTRAÇÃO: </label>
-        <span style="padding: 5px;">Guaratinguetá</span>
-      </div>
-    </div>
-  </p-fieldset>
+    <br />
 
-  <br />
+    <a pButton type="button" label="Salvar" class="ui-button-info"
+      style="float: right !important; margin-left: 10px !important;"></a>
 
-  <a pButton type="button" label="Salvar" class="ui-button-info"
-    style="float: right !important; margin-left: 10px !important;"></a>
+    <a pButton type="button" label="Cancelar" class="ui-button-danger" style="float: right !important;"></a>
 
-  <a pButton type="button" label="Cancelar" class="ui-button-danger" style="float: right !important;"></a>
+  </form>
 
-</form>
+  <br /><br /><br /><br /><br /><br /><br /><br />
 
-<br /><br /><br /><br /><br /><br /><br /><br />
+</div>

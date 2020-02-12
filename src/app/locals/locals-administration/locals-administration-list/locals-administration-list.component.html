@@ -1,3 +1,33 @@
-<br>
+<div class="container-fluid">
 
-<p>locals-administration-list works!</p>
+  <br /><br /><br />
+
+  <h1>Administrações</h1>
+
+  <hr />
+
+  <br />
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="text-center">Código</th>
+        <th class="text-center">Nome</th>
+        <th class="text-center">CNPJ</th>
+        <th class="text-center">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="text-center">ADM-001</td>
+        <td class="text-center">Guaratinguetá</td>
+        <td class="text-center">CNPJ</td>
+        <td class="text-center">
+          <button pButton type="button" label="Editar" class="ui-button-success"></button>
+          <button pButton type="button" label="Excluir" class="ui-button-info" (click)="accessMeeting()"></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
