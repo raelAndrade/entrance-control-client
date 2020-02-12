@@ -19,17 +19,6 @@ export class AuthGuard implements CanActivate, CanLoad {
     return this.verifyAccess();
   }
 
-  /*  canActivate(): boolean {
-     if (this.authService.loggedIn()) {
-       console.log('true')
-       return true
-     } else {
-       console.log('false')
-       this.router.navigate(['/login'])
-       return false
-     }
-   } */
-
   private verifyAccess(): boolean {
     if (this.authService.loggedIn()) {
       return true
@@ -37,11 +26,6 @@ export class AuthGuard implements CanActivate, CanLoad {
       this.router.navigate(['/login'])
       return false
     }
-    /* if (this.authService.userIsAuthenticate()) {
-      return true;
-    }
-    this.router.navigate(['/login']);
-    return false; */
   }
 
   canLoad(route: Route): Observable<boolean> | Promise<boolean> | boolean {
