@@ -1,12 +1,7 @@
-import { SharedService } from '../../services/shared.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
-import { UserService } from '../../services/user.service';
 import { AuthService } from '../auth.service';
-
-import { User } from '../../models/user.model';
-import { CurrentUser } from 'src/app/models/current-user.model';
 
 @Component({
   selector: 'app-login',

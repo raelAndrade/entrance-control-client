@@ -14,6 +14,7 @@ import { DropdownModule } from 'primeng/components/dropdown/dropdown';
 import { CheckboxModule } from 'primeng/components/checkbox/checkbox';
 import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
 import { ToggleButtonModule } from 'primeng/components/togglebutton/togglebutton';
+import { BreadcrumbModule } from 'primeng/components/breadcrumb/breadcrumb';
 
 /* Componentes */
 import { LocalsAdministrationAddComponent } from './locals-administration/locals-administration-add/locals-administration-add.component';
@@ -30,7 +31,6 @@ import { LocalsRoutingModule } from './locals.routing.module';
 @NgModule({
   imports: [
     CommonModule,
-    LocalsRoutingModule,
     MessagesModule,
     PanelModule,
     TableModule,
@@ -43,6 +43,8 @@ import { LocalsRoutingModule } from './locals.routing.module';
     CheckboxModule,
     SelectButtonModule,
     ToggleButtonModule,
+    BreadcrumbModule,
+    LocalsRoutingModule,
   ],
   exports: [],
   declarations: [

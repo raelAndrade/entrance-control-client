@@ -1,8 +1,9 @@
 import { Router } from '@angular/router';
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Injectable, EventEmitter } from '@angular/core';
 
+import { User } from '../models/user.model';
 import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class AuthService {
@@ -14,7 +15,7 @@ export class AuthService {
   }
 
   loggedIn() {
-    return !localStorage.getItem('token')
+    return !!localStorage.getItem('token')
   }
 
   getToken() {
@@ -29,4 +30,5 @@ export class AuthService {
   registerUser(user) {
     return this.http.post<any>(`${environment.apiUrlUsers}/register`, user)
   }
+
 }

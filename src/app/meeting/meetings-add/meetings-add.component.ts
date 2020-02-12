@@ -1,5 +1,6 @@
+
 import { Component, OnInit } from '@angular/core';
-import { SelectItem } from 'primeng/api';
+import { SelectItem, MenuItem } from 'primeng/api';
 
 import { Saloes } from '../../models/saloes';
 import { AdmService } from '../../services/adm.service';
@@ -18,6 +19,8 @@ export class MeetingsAddComponent implements OnInit {
   adm: any;
   admin: Administrations[] = [];
   filteredAdministration: any[];
+
+  breadcrumb: MenuItem[];
 
   constructor(private service: AdmService) {
     this.saloes = [

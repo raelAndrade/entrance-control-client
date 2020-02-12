@@ -19,6 +19,7 @@ import { DropdownModule } from 'primeng/components/dropdown/dropdown';
 import { CheckboxModule } from 'primeng/components/checkbox/checkbox';
 import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
 import { ToggleButtonModule } from 'primeng/components/togglebutton/togglebutton';
+import { BreadcrumbModule } from 'primeng/components/breadcrumb/breadcrumb';
 
 @NgModule({
   imports: [
@@ -35,6 +36,7 @@ import { ToggleButtonModule } from 'primeng/components/togglebutton/togglebutton
     CheckboxModule,
     SelectButtonModule,
     ToggleButtonModule,
+    BreadcrumbModule,
     MeetingsRoutingModule,
   ],
   exports: [],

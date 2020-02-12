@@ -6,9 +6,10 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
 
 /* Módulos dos components */
+
+import { LocalsModule } from './locals/locals.module';
 import { MeetingsModule } from './meeting/meetings.module';
 import { ScheduledModule } from './schedule/scheduled.module';
-import { LocalsModule } from './locals/locals.module';
 
 /* Componentes PrimeNG */
 import { MessagesModule } from 'primeng/components/messages/messages';
@@ -30,19 +31,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { MenubarComponent } from './components/menubar/menubar.component';
 import { HeaderComponent } from '../app/components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-
 import { HomeComponent } from './components/home/home.component';
+
 import { LoginComponent } from './security/login/login.component';
+import { InterceptorService } from './security/interceptor.service';
+
+import { environment } from '../environments/environment';
 
 import { AuthService } from './security/auth.service';
-import { SharedService } from './services/shared.service';
 import { UserService } from './services/user.service';
 
 import { AuthGuard } from './guards/auth.guard';
-import { ScheduledGuard } from './schedule/guards/scheduled.guard';
-import { MeetingsGuard } from './meeting/guards/meetings.guard';
 import { LocalsGuard } from './locals/guards/locals.guard';
-import { InterceptorService } from './security/interceptor.service';
+import { MeetingsGuard } from './meeting/guards/meetings.guard';
+import { ScheduledGuard } from './schedule/guards/scheduled.guard';
 
 
 @NgModule({
@@ -84,7 +86,6 @@ import { InterceptorService } from './security/interceptor.service';
     ScheduledGuard,
     LocalsGuard,
     UserService,
-    SharedService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: InterceptorService,
