@@ -11,13 +11,15 @@
           <strong>Nome ou senha inválida</strong>
         </div>
         <div class="form-group">
-          <input [(ngModel)]="user.email" type="text" class="validate form-control" name="email">
+          <!-- <input [(ngModel)]="user.email" type="text" class="validate form-control" name="email"> -->
+          <input type="text" name="username" [(ngModel)]="username" class="validate form-control">
         </div>
         <div class="form-group">
-          <input [(ngModel)]="user.password" type="password" class="validate form-control" name="password">
+          <!-- <input [(ngModel)]="user.password" type="password" class="validate form-control" name="password"> -->
+          <input type="password" name="password" [(ngModel)]="password" class="validate form-control">
         </div>
-        <!-- <button pButton type="submit" label="Entrar"></button> -->
-        <button pButton type="submit" label="Entrar" (click)="login()"></button>
+        <button pButton type="submit" label="Entrar" (click)=checkLogin()></button>
+        <!-- <button pButton type="submit" label="Entrar" (click)="login()"></button> -->
       </form>
     </div>
   </div>

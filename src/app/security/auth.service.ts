@@ -8,27 +8,35 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class AuthService {
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(
+    /* private http: HttpClient, private router: Router */
+  ) { }
 
-  login(user) {
-    return this.http.post<any>(`${environment.apiUrlUsers}/login`, user)
-  }
-
-  loggedIn() {
-    return !!localStorage.getItem('token')
-  }
+  /*  login(user, pass) {
+     return this.http.post<any>(`${environment.apiUrlUsers}/login`, user)
+   } */
 
   getToken() {
     return localStorage.getItem('token')
   }
 
-  logout() {
-    localStorage.removeItem('token')
-    this.router.navigate(['/login'])
+  /* ========================================================================================== */
+  authenticate(username, password) {
+    if (username === "israel" && password === "123456") {
+      sessionStorage.setItem('username', username)
+      return true;
+    } else {
+      return false;
+    }
   }
 
-  registerUser(user) {
-    return this.http.post<any>(`${environment.apiUrlUsers}/register`, user)
+  isUserLoggedIn() {
+    let user = sessionStorage.getItem('username')
+    return !(user === null)
+  }
+
+  logOut() {
+    sessionStorage.removeItem('username')
   }
 
 }

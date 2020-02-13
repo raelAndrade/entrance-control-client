@@ -11,13 +11,13 @@ import { AuthService } from './security/auth.service';
 export class AppComponent {
   title = 'CCB - Controle de Entradas';
 
-  /* showMenu = false; */
-
   constructor(private authService: AuthService) { }
 
-  ngOnInit() {
-    /* this.authService.showMenuEmitter.subscribe(
-      mostrar => this.showMenu = mostrar
-    ); */
-  }
+  ngOnInit() { }
+
+  /* showWrapper() {
+    if (this.authService.isUserLoggedIn()) {
+      this.showPageWrapper = !this.showPageWrapper;
+    }
+  } */
 }

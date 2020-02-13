@@ -20,12 +20,10 @@ export class AuthGuard implements CanActivate, CanLoad {
   }
 
   private verifyAccess(): boolean {
-    if (this.authService.loggedIn()) {
-      return true
-    } else {
-      this.router.navigate(['/login'])
-      return false
-    }
+    if (this.authService.isUserLoggedIn())
+      return true;
+    this.router.navigate(['login']);
+    return false;
   }
 
   canLoad(route: Route): Observable<boolean> | Promise<boolean> | boolean {

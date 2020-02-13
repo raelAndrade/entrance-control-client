@@ -45,6 +45,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { LocalsGuard } from './locals/guards/locals.guard';
 import { MeetingsGuard } from './meeting/guards/meetings.guard';
 import { ScheduledGuard } from './schedule/guards/scheduled.guard';
+import { LogoutComponent } from './security/logout/logout.component';
 
 
 @NgModule({
@@ -55,6 +56,7 @@ import { ScheduledGuard } from './schedule/guards/scheduled.guard';
     FooterComponent,
     HomeComponent,
     LoginComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,

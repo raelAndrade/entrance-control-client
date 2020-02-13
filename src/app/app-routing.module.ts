@@ -5,36 +5,30 @@ import { LoginComponent } from './security/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { AuthGuard } from './guards/auth.guard';
-import { ScheduledGuard } from './schedule/guards/scheduled.guard';
-import { MeetingsGuard } from './meeting/guards/meetings.guard';
-import { LocalsGuard } from './locals/guards/locals.guard';
+import { LogoutComponent } from './security/logout/logout.component';
 
 
 export const appRoutes: Routes = [
   {
     path: 'reuniao',
     loadChildren: './meetings/meetings.module#MeetingsModule',
-    canActivate: [AuthGuard],
-    canActivateChild: [MeetingsGuard],
-    canLoad: [AuthGuard]
   },
   {
     path: 'agendamento',
     loadChildren: './scheduled/scheduled.module#ScheduledModule',
-    canActivate: [AuthGuard],
-    canActivateChild: [ScheduledGuard],
-    canLoad: [AuthGuard]
   },
   {
     path: 'locais',
     loadChildren: './locals/locals.module#LocalsModule',
-    canActivate: [AuthGuard],
-    canActivateChild: [LocalsGuard],
-    canLoad: [AuthGuard]
   },
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'logout',
+    component: LogoutComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: '',

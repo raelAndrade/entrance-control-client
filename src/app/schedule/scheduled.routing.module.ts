@@ -4,11 +4,31 @@ import { Routes, RouterModule } from '@angular/router';
 import { ScheduleAddComponent } from './schedule-add/schedule-add.component';
 import { ScheduleListMeetingComponent } from './schedule-list-meeting/schedule-list-meeting.component';
 import { ScheduleListChurchComponent } from './schedule-list-church/schedule-list-church.component';
+import { AuthGuard } from '../guards/auth.guard';
+import { ScheduledGuard } from './guards/scheduled.guard';
 
 const scheduledRoutes: Routes = [
-  { path: 'agendamento/listaIgrejas', component: ScheduleListChurchComponent },
-  { path: 'agendamento/listaAgendamentos', component: ScheduleListMeetingComponent },
-  { path: 'agendamento/novoAgendamento', component: ScheduleAddComponent }
+  {
+    path: 'agendamento/listaIgrejas',
+    component: ScheduleListChurchComponent,
+    canActivate: [AuthGuard],
+    canActivateChild: [ScheduledGuard],
+    canLoad: [AuthGuard]
+  },
+  {
+    path: 'agendamento/listaAgendamentos',
+    component: ScheduleListMeetingComponent,
+    canActivate: [AuthGuard],
+    canActivateChild: [ScheduledGuard],
+    canLoad: [AuthGuard]
+  },
+  {
+    path: 'agendamento/novoAgendamento',
+    component: ScheduleAddComponent,
+    canActivate: [AuthGuard],
+    canActivateChild: [ScheduledGuard],
+    canLoad: [AuthGuard]
+  }
 ];
 
 @NgModule({

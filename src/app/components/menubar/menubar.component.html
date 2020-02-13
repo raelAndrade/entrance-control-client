@@ -1,118 +1,125 @@
-<div class="navbar-default sidebar" role="navigation">
-  <div class="sidebar-nav navbar-collapse">
-    <ul class="nav" id="side-menu">
-      <li>
-        <a routerLink="" class="active"><i class="fa fa-dashboard fa-fw"></i> Home</a>
-      </li>
+<div *ngIf="authService.isUserLoggedIn()">
 
-      <!-- SCHEDULE -->
-      <!-- <li *ngIf="user.role == 'ADMIN'"> -->
-      <!-- <li *ngIf="isAdmin"> -->
-      <li>
-        <a href=""><i class="fa fa-calendar-minus-o" aria-hidden="true"></i> Agendamendos<span
-            class="fa arrow"></span></a>
-        <ul class="nav nav-second-level">
-          <li>
-            <a class="nav-item nav-link" routerLink="agendamento/listaIgrejas" routerLinkActive="active">
-              <i class="fa fa-list" aria-hidden="true"></i> Listar
-              Igrejas</a>
-          </li>
-          <li>
-            <a class="nav-item nav-link" routerLink="agendamento/listaAgendamentos" routerLinkActive="active"><i
-                class="fa fa-list-alt" aria-hidden="true"></i>
-              Listar Agendamentos</a>
-          </li>
-        </ul>
-      </li>
+  <div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+      <ul class="nav" id="side-menu">
+        <li *ngIf="authService.isUserLoggedIn()">
+          <a href="" *ngIf="authService.isUserLoggedIn()" class="active"><i class="fa fa-dashboard fa-fw"></i>
+            Home</a>
+        </li>
 
-      <!-- MEETINGS -->
-      <!-- <li *ngIf="user.role == 'ADMIN'"> -->
-      <!--  <li *ngIf="isAdmin"> -->
-      <li>
-        <a routerLink=""><i class="fa fa-group fa-fw"></i> Reuniões<span class="fa arrow"></span></a>
-        <ul class="nav nav-second-level">
-          <li>
-            <a class="nav-item nav-link" routerLink="reuniao/listarReunioes" routerLinkActive="active"><i
-                class="fa fa-list" aria-hidden="true"></i>
-              Listar Reuniões</a>
-          </li>
-          <li>
-            <a class="nav-item nav-link" routerLink="reuniao/relatorio" routerLinkActive="active"><i
-                class="fa fa-bar-chart" aria-hidden="true"></i>
-              Relatório</a>
-          </li>
-        </ul>
-      </li>
+        <!-- SCHEDULE -->
+        <!-- <li *ngIf="user.role == 'ADMIN'"> -->
+        <!-- <li *ngIf="isAdmin"> -->
+        <li>
+          <a href="" *ngIf="authService.isUserLoggedIn()"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i>
+            Agendamendos<span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level">
+            <li>
+              <a class="nav-item nav-link" routerLink="agendamento/listaIgrejas" routerLinkActive="active">
+                <i class="fa fa-list" aria-hidden="true"></i> Listar
+                Igrejas</a>
+            </li>
+            <li>
+              <a class="nav-item nav-link" routerLink="agendamento/listaAgendamentos" routerLinkActive="active"><i
+                  class="fa fa-list-alt" aria-hidden="true"></i>
+                Listar Agendamentos</a>
+            </li>
+          </ul>
+        </li>
 
-      <!-- LOCALS -->
-      <!-- <li *ngIf="user.role == 'ADMIN'"> -->
-      <li>
-        <a routerLink=""><i class="fa fa-map-marker"></i> Locais<span class="fa arrow"></span></a>
-        <ul class="nav nav-second-level">
-          <li>
-            <a href="#"><i class="fa fa-university fa-fw" aria-hidden="true"></i> Regionais<span
-                class="fa arrow"></span></a>
-            <ul class="nav nav-third-level">
-              <li>
-                <a class="nav-item nav-link" routerLink="regionais/cadastrarRegional" routerLinkActive="active"><i
-                    class="fa fa-plus" aria-hidden="true"></i> Cadastrar
-                  Regional</a>
-              </li>
-              <li>
-                <a class="nav-item nav-link" routerLink="regionais/listarRegionais" routerLinkActive="active"><i
-                    class="fa fa-list" aria-hidden="true"></i>
-                  Listar Regionais</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-building" aria-hidden="true"></i> Administrações<span
-                class="fa arrow"></span></a>
-            <ul class="nav nav-third-level">
-              <li>
-                <a class="nav-item nav-link" routerLink="administracao/cadastrarAdministracao"
-                  routerLinkActive="active"><i class="fa fa-plus" aria-hidden="true"></i>
-                  Cadastrar Administração</a>
-              </li>
-              <li>
-                <a class="nav-item nav-link" routerLink="administracao/ListarAdministroes" routerLinkActive="active"><i
-                    class="fa fa-list" aria-hidden="true"></i>
-                  Listar Administrações</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-home fa-fw" aria-hidden="true"></i> Igrejas<span class="fa arrow"></span></a>
-            <ul class="nav nav-third-level">
-              <li>
-                <a class="nav-item nav-link" routerLink="igrejas/cadastrarIgreja" routerLinkActive="active"><i
-                    class="fa fa-plus" aria-hidden="true"></i>
-                  Cadastrar Igreja</a>
-              </li>
-              <li>
-                <a class="nav-item nav-link" routerLink="igrejas/ListarIgrejas" routerLinkActive="active"><i
-                    class="fa fa-list" aria-hidden="true"></i>
-                  Listar Igrejas</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-hotel fa-fw" aria-hidden="true"></i> Salões<span class="fa arrow"></span></a>
-            <ul class="nav nav-third-level">
-              <li>
-                <a class="nav-item nav-link" routerLink="saloes/cadastrarSalao" routerLinkActive="active"><i
-                    class="fa fa-plus" aria-hidden="true"></i>
-                  Cadastrar Salão</a>
-              </li>
-              <li>
-                <a class="nav-item nav-link" routerLink="saloes/ListarSaloes" routerLinkActive="active"><i
-                    class="fa fa-list" aria-hidden="true"></i>
-                  Listar Salões</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
+        <!-- MEETINGS -->
+        <!-- <li *ngIf="user.role == 'ADMIN'"> -->
+        <!--  <li *ngIf="isAdmin"> -->
+        <li>
+          <a routerLink="" *ngIf="authService.isUserLoggedIn()"><i class="fa fa-group fa-fw"></i> Reuniões<span
+              class="fa arrow"></span></a>
+          <ul class="nav nav-second-level">
+            <li>
+              <a class="nav-item nav-link" routerLink="reuniao/listarReunioes" routerLinkActive="active"><i
+                  class="fa fa-list" aria-hidden="true"></i>
+                Listar Reuniões</a>
+            </li>
+            <li>
+              <a class="nav-item nav-link" routerLink="reuniao/relatorio" routerLinkActive="active"><i
+                  class="fa fa-bar-chart" aria-hidden="true"></i>
+                Relatório</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- LOCALS -->
+        <!-- <li *ngIf="user.role == 'ADMIN'"> -->
+        <li>
+          <a href="" *ngIf="authService.isUserLoggedIn()"><i class="fa fa-map-marker"></i> Locais<span
+              class="fa arrow"></span></a>
+          <ul class="nav nav-second-level">
+            <li>
+              <a href="#"><i class="fa fa-university fa-fw" aria-hidden="true"></i> Regionais<span
+                  class="fa arrow"></span></a>
+              <ul class="nav nav-third-level">
+                <li>
+                  <a class="nav-item nav-link" routerLink="regionais/cadastrarRegional" routerLinkActive="active"><i
+                      class="fa fa-plus" aria-hidden="true"></i> Cadastrar
+                    Regional</a>
+                </li>
+                <li>
+                  <a class="nav-item nav-link" routerLink="regionais/listarRegionais" routerLinkActive="active"><i
+                      class="fa fa-list" aria-hidden="true"></i>
+                    Listar Regionais</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-building" aria-hidden="true"></i> Administrações<span
+                  class="fa arrow"></span></a>
+              <ul class="nav nav-third-level">
+                <li>
+                  <a class="nav-item nav-link" routerLink="administracao/cadastrarAdministracao"
+                    routerLinkActive="active"><i class="fa fa-plus" aria-hidden="true"></i>
+                    Cadastrar Administração</a>
+                </li>
+                <li>
+                  <a class="nav-item nav-link" routerLink="administracao/ListarAdministroes"
+                    routerLinkActive="active"><i class="fa fa-list" aria-hidden="true"></i>
+                    Listar Administrações</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-home fa-fw" aria-hidden="true"></i> Igrejas<span class="fa arrow"></span></a>
+              <ul class="nav nav-third-level">
+                <li>
+                  <a class="nav-item nav-link" routerLink="igrejas/cadastrarIgreja" routerLinkActive="active"><i
+                      class="fa fa-plus" aria-hidden="true"></i>
+                    Cadastrar Igreja</a>
+                </li>
+                <li>
+                  <a class="nav-item nav-link" routerLink="igrejas/ListarIgrejas" routerLinkActive="active"><i
+                      class="fa fa-list" aria-hidden="true"></i>
+                    Listar Igrejas</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-hotel fa-fw" aria-hidden="true"></i> Salões<span class="fa arrow"></span></a>
+              <ul class="nav nav-third-level">
+                <li>
+                  <a class="nav-item nav-link" routerLink="saloes/cadastrarSalao" routerLinkActive="active"><i
+                      class="fa fa-plus" aria-hidden="true"></i>
+                    Cadastrar Salão</a>
+                </li>
+                <li>
+                  <a class="nav-item nav-link" routerLink="saloes/ListarSaloes" routerLinkActive="active"><i
+                      class="fa fa-list" aria-hidden="true"></i>
+                    Listar Salões</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
+
 </div>

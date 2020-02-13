@@ -12,18 +12,21 @@ export class LoginComponent implements OnInit {
 
   user = {};
 
+  username = ''
+  password = ''
+  invalidLogin = false
+
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() { }
 
-  login() {
-    this.authService.login(this.user).subscribe(
-      res => {
-        localStorage.setItem('token', res.token)
-        this.router.navigate([''])
-      }, err =>
-      this.router.navigate(['/login'])
-    )
+  checkLogin() {
+    if (this.authService.authenticate(this.username, this.password)
+    ) {
+      this.router.navigate([''])
+      this.invalidLogin = false
+    } else
+      this.invalidLogin = true
   }
 
 }
