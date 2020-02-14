@@ -1,23 +1,30 @@
 import { Injectable } from '@angular/core';
-import { CanActivateChild, ActivatedRouteSnapshot, RouterStateSnapshot, Resolve } from '@angular/router';
+import { CanActivateChild, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 
 import { Observable } from 'rxjs';
+import { AuthService } from 'src/app/security/auth.service';
 
 @Injectable()
 export class LocalsGuard implements CanActivateChild {
 
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) { }
+
   canActivateChild(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<boolean> | boolean {
-    return true;
+      route: ActivatedRouteSnapshot,
+      state: RouterStateSnapshot
+  ): Observable<boolean>|boolean {
+    return this.verifyAccess();
   }
 
-  resolve(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<any> | Promise<any> | any {
-    return true;
+  private verifyAccess(): boolean {
+    if (this.authService.isUserLoggedIn()) {
+      return true;
+    }
+    this.router.navigate(['login']);
+    return false;
   }
 
 }

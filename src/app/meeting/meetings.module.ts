@@ -24,6 +24,7 @@ import { BreadcrumbModule } from 'primeng/components/breadcrumb/breadcrumb';
 @NgModule({
   imports: [
     CommonModule,
+    MeetingsRoutingModule,
     MessagesModule,
     PanelModule,
     TableModule,
@@ -37,7 +38,6 @@ import { BreadcrumbModule } from 'primeng/components/breadcrumb/breadcrumb';
     SelectButtonModule,
     ToggleButtonModule,
     BreadcrumbModule,
-    MeetingsRoutingModule,
   ],
   exports: [],
   declarations: [

@@ -5,10 +5,31 @@ import { MeetingsAuthenticationComponent } from './meetings-authentication/meeti
 import { MeetingsListComponent } from './meetings-list/meetings-list.component';
 import { MeetingsAddComponent } from './meetings-add/meetings-add.component';
 
+import { AuthGuard } from '../guards/auth.guard';
+import { MeetingsGuard } from './guards/meetings.guard';
+
 const meetingsRoutes: Routes = [
-  { path: 'reuniao/novo', component: MeetingsAddComponent },
-  { path: 'reuniao/listarReunioes', component: MeetingsListComponent },
-  { path: 'reuniao/autenticacao', component: MeetingsAuthenticationComponent }
+  {
+    path: 'reuniao/novo',
+    component: MeetingsAddComponent,
+    canActivate: [AuthGuard],
+    canActivateChild: [MeetingsGuard],
+    canLoad: [AuthGuard]
+  },
+  {
+    path: 'reuniao/listarReunioes',
+    component: MeetingsListComponent,
+    canActivate: [AuthGuard],
+    canActivateChild: [MeetingsGuard],
+    canLoad: [AuthGuard]
+  },
+  {
+    path: 'reuniao/autenticacao',
+    component: MeetingsAuthenticationComponent,
+    canActivate: [AuthGuard],
+    canActivateChild: [MeetingsGuard],
+    canLoad: [AuthGuard]
+  }
 ];
 
 @NgModule({

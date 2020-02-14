@@ -36,8 +36,6 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './security/login/login.component';
 import { InterceptorService } from './security/interceptor.service';
 
-import { environment } from '../environments/environment';
-
 import { AuthService } from './security/auth.service';
 import { UserService } from './services/user.service';
 

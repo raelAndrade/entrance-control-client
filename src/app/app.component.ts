@@ -13,6 +13,7 @@ export class AppComponent {
 
   constructor(private authService: AuthService) { }
 
+  // tslint:disable-next-line:use-lifecycle-interface
   ngOnInit() { }
 
   /* showWrapper() {

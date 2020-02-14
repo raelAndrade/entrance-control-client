@@ -10,6 +10,7 @@ body {
   padding: 30px 15px 0 15px;
   min-height: 568px;
   background-color: #fff;
+  margin-top: 0px;
 }
 
 @media(min-width:768px) {
@@ -20,6 +21,12 @@ body {
     border-left: 1px solid #e7e7e7;
   }
 }
+
+/* .main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px;
+} */
 
 .navbar-header {
   float: left;

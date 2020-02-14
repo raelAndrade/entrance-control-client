@@ -20,8 +20,9 @@ export class AuthGuard implements CanActivate, CanLoad {
   }
 
   private verifyAccess(): boolean {
-    if (this.authService.isUserLoggedIn())
+    if (this.authService.isUserLoggedIn()) {
       return true;
+    }
     this.router.navigate(['login']);
     return false;
   }
