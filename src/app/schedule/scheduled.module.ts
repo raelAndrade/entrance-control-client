@@ -21,7 +21,8 @@ import { DropdownModule } from 'primeng/components/dropdown/dropdown';
 import { CheckboxModule } from 'primeng/components/checkbox/checkbox';
 import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
 import { ToggleButtonModule } from 'primeng/components/togglebutton/togglebutton';
-
+import { ConfirmDialogModule } from 'primeng/components/confirmdialog/confirmdialog';
+import { ConfirmationService } from 'primeng/api';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { ToggleButtonModule } from 'primeng/components/togglebutton/togglebutton
     CheckboxModule,
     SelectButtonModule,
     ToggleButtonModule,
+    ConfirmDialogModule
   ],
   exports: []
 })

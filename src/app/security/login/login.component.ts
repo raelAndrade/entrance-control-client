@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 import { AuthService } from '../auth.service';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-login',
@@ -12,11 +13,15 @@ export class LoginComponent implements OnInit {
 
   user = {};
 
-  username = ''
+  shared: SharedService;
+
+  username = 'israel'
   password = ''
   invalidLogin = false
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router) {
+    this.shared = SharedService.getInstance();
+  }
 
   ngOnInit() { }
 

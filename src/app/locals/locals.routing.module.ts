@@ -13,14 +13,14 @@ import { LocalsGuard } from './guards/locals.guard';
 
 const localsRoutes: Routes = [
   {
-    path: 'regionais/cadastrarRegional',
+    path: 'regionais/cadastrar',
     component: LocalsRegionalsAddComponent,
     canActivate: [AuthGuard],
     canActivateChild: [LocalsGuard],
     canLoad: [AuthGuard]
   },
   {
-    path: 'regionais/listarRegionais',
+    path: 'regionais/listar',
     component: LocalsRegionalsListComponent,
     canActivate: [AuthGuard],
     canActivateChild: [LocalsGuard],
@@ -28,14 +28,14 @@ const localsRoutes: Routes = [
   },
 
   {
-    path: 'administracao/cadastrarAdministracao',
+    path: 'administracao/cadastrar',
     component: LocalsAdministrationAddComponent,
     canActivate: [AuthGuard],
     canActivateChild: [LocalsGuard],
     canLoad: [AuthGuard]
   },
   {
-    path: 'administracao/ListarAdministroes',
+    path: 'administracao/listar',
     component: LocalsAdministrationListComponent,
     canActivate: [AuthGuard],
     canActivateChild: [LocalsGuard],
@@ -43,14 +43,14 @@ const localsRoutes: Routes = [
   },
 
   {
-    path: 'igrejas/cadastrarIgreja',
+    path: 'igrejas/cadastrar',
     component: LocalsChurchesAddComponent,
     canActivate: [AuthGuard],
     canActivateChild: [LocalsGuard],
     canLoad: [AuthGuard]
   },
   {
-    path: 'igrejas/ListarIgrejas',
+    path: 'igrejas/listar',
     component: LocalsChurchesListComponent,
     canActivate: [AuthGuard],
     canActivateChild: [LocalsGuard],
@@ -58,14 +58,14 @@ const localsRoutes: Routes = [
   },
 
   {
-    path: 'saloes/cadastrarSalao',
+    path: 'saloes/cadastrar',
     component: LocalsChurchesAddComponent,
     canActivate: [AuthGuard],
     canActivateChild: [LocalsGuard],
     canLoad: [AuthGuard]
   },
   {
-    path: 'saloes/ListarSaloes',
+    path: 'saloes/listar',
     component: LocalsChurchesListComponent,
     canActivate: [AuthGuard],
     canActivateChild: [LocalsGuard],

@@ -46,7 +46,7 @@ export class ScheduleListChurchComponent implements OnInit {
   }
 
   registerMeeting() {
-    this.router.navigate(['agendamento/novoAgendamento']);
+    this.router.navigate(['agendamento/novo']);
   }
 
 }

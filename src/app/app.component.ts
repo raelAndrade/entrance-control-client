@@ -1,7 +1,7 @@
-
 import { Component } from '@angular/core';
 
 import { AuthService } from './security/auth.service';
+import { SharedService } from './services/shared.service';
 
 @Component({
   selector: 'app-root',
@@ -10,15 +10,21 @@ import { AuthService } from './security/auth.service';
 })
 export class AppComponent {
   title = 'CCB - Controle de Entradas';
+  showTemplate: boolean = false;
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private shared: SharedService) {
+    this.shared = SharedService.getInstance();
+  }
 
-  // tslint:disable-next-line:use-lifecycle-interface
-  ngOnInit() { }
+  ngOnInit() {
+    this.shared.showTemplate.subscribe(
+      show => this.showTemplate = show
+    );
+  }
 
-  /* showWrapper() {
-    if (this.authService.isUserLoggedIn()) {
-      this.showPageWrapper = !this.showPageWrapper;
+  showContentWrapper() {
+    return {
+      'content-wrapper': this.shared.isLoggedIn()
     }
-  } */
+  }
 }

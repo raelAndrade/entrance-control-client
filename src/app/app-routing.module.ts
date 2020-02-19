@@ -11,11 +11,11 @@ import { LogoutComponent } from './security/logout/logout.component';
 export const appRoutes: Routes = [
   {
     path: 'reuniao',
-    loadChildren: './meetings/meetings.module#MeetingsModule',
+    loadChildren: './meeting/meetings.module#MeetingsModule',
   },
   {
     path: 'agendamento',
-    loadChildren: './scheduled/scheduled.module#ScheduledModule',
+    loadChildren: './schedule/scheduled.module#ScheduledModule',
   },
   {
     path: 'locais',

@@ -9,21 +9,21 @@ import { ScheduledGuard } from './guards/scheduled.guard';
 
 const scheduledRoutes: Routes = [
   {
-    path: 'agendamento/listaIgrejas',
+    path: 'agendamento/listarIgrejas',
     component: ScheduleListChurchComponent,
     canActivate: [AuthGuard],
     canActivateChild: [ScheduledGuard],
     canLoad: [AuthGuard]
   },
   {
-    path: 'agendamento/listaAgendamentos',
+    path: 'agendamento/listar',
     component: ScheduleListMeetingComponent,
     canActivate: [AuthGuard],
     canActivateChild: [ScheduledGuard],
     canLoad: [AuthGuard]
   },
   {
-    path: 'agendamento/novoAgendamento',
+    path: 'agendamento/novo',
     component: ScheduleAddComponent,
     canActivate: [AuthGuard],
     canActivateChild: [ScheduledGuard],

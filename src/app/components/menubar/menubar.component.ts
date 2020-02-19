@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/security/auth.service';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-menubar',
@@ -8,7 +9,11 @@ import { AuthService } from 'src/app/security/auth.service';
 })
 export class MenubarComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
+  shared: SharedService;
+
+  constructor(private authService: AuthService) {
+    this.shared = SharedService.getInstance();
+  }
 
   ngOnInit() { }
 }

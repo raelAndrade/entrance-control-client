@@ -22,7 +22,7 @@ export class AuthService {
 
   /* ========================================================================================== */
   authenticate(username, password) {
-    if (username === "israel" && password === "123456") {
+    if (username === "israel" && password === "123") {
       sessionStorage.setItem('username', username)
       return true;
     } else {

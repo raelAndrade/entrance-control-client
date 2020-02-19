@@ -20,6 +20,8 @@ import { CheckboxModule } from 'primeng/components/checkbox/checkbox';
 import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
 import { ToggleButtonModule } from 'primeng/components/togglebutton/togglebutton';
 import { BreadcrumbModule } from 'primeng/components/breadcrumb/breadcrumb';
+import { ConfirmDialogModule } from 'primeng/components/confirmdialog/confirmdialog';
+import { ConfirmationService } from 'primeng/api';
 
 @NgModule({
   imports: [
@@ -38,6 +40,7 @@ import { BreadcrumbModule } from 'primeng/components/breadcrumb/breadcrumb';
     SelectButtonModule,
     ToggleButtonModule,
     BreadcrumbModule,
+    ConfirmDialogModule
   ],
   exports: [],
   declarations: [

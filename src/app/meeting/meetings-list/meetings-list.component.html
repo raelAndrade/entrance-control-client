@@ -31,8 +31,13 @@
         <td class="text-center">Bairro da Cruz</td>
         <td class="text-center">Piedade</td>
         <td class="text-center">
-          <button pButton type="button" label="Fechar" class="ui-button-success"></button>
-          <button pButton type="button" label="Acessar" class="ui-button-info" (click)="accessMeeting()"></button>
+          <p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000"></p-confirmDialog>
+          <button type="button" (click)="closeMeeting()" pButton icon="pi pi-times" label="Fechar"
+            class="ui-button-success" id="openMeeting"></button>
+          <button type="button" (click)="accessMeeting()" pButton icon="pi pi-check" label="Acessar"
+            class="ui-button-infor"></button>
+          <!-- <button pButton type="button" label="Fechar" class="ui-button-success"></button>
+          <button pButton type="button" label="Acessar" class="ui-button-info" (click)="accessMeeting()"></button> -->
         </td>
       </tr>
     </tbody>

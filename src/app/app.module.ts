@@ -6,7 +6,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtModule } from '@auth0/angular-jwt';
 
 /* Módulos dos components */
-
 import { LocalsModule } from './locals/locals.module';
 import { MeetingsModule } from './meeting/meetings.module';
 import { ScheduledModule } from './schedule/scheduled.module';
@@ -24,6 +23,7 @@ import { DropdownModule } from 'primeng/components/dropdown/dropdown';
 import { CheckboxModule } from 'primeng/components/checkbox/checkbox';
 import { SelectButtonModule } from 'primeng/components/selectbutton/selectbutton';
 import { ToggleButtonModule } from 'primeng/components/togglebutton/togglebutton';
+import { ConfirmDialogModule } from 'primeng/components/confirmdialog/confirmdialog';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -44,6 +44,8 @@ import { LocalsGuard } from './locals/guards/locals.guard';
 import { MeetingsGuard } from './meeting/guards/meetings.guard';
 import { ScheduledGuard } from './schedule/guards/scheduled.guard';
 import { LogoutComponent } from './security/logout/logout.component';
+import { SharedService } from './services/shared.service';
+import { DialogModalComponent } from './components/dialog-modal/dialog-modal.component';
 
 
 @NgModule({
@@ -55,6 +57,7 @@ import { LogoutComponent } from './security/logout/logout.component';
     HomeComponent,
     LoginComponent,
     LogoutComponent,
+    DialogModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,6 +77,7 @@ import { LogoutComponent } from './security/logout/logout.component';
     CheckboxModule,
     SelectButtonModule,
     ToggleButtonModule,
+    ConfirmDialogModule,
     MeetingsModule,
     ScheduledModule,
     LocalsModule,
@@ -86,6 +90,7 @@ import { LogoutComponent } from './security/logout/logout.component';
     ScheduledGuard,
     LocalsGuard,
     UserService,
+    SharedService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: InterceptorService,
