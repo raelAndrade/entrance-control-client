@@ -10,24 +10,20 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th class="text-center">Código</th>
-        <th class="text-center">Data Inicial</th>
-        <th class="text-center">Data Final</th>
-        <th class="text-center">Igreja</th>
-        <th class="text-center">Salão</th>
+        <th>Reunião</th>
+        <th>Igreja</th>
+        <th>Salão</th>
         <th class="text-center">Ações</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td class="text-center">Reunião - 001</td>
-        <td class="text-center">08/02/2020</td>
-        <td class="text-center">08/02/2020</td>
-        <td class="text-center">Vila Passos</td>
-        <td class="text-center">Principal</td>
-        <td class="text-center">
+      <tr *ngFor="let meeting of meetings">
+        <td *ngIf="meeting.status != 'FINISHED'">{{ meeting.name }}</td>
+        <td *ngIf="meeting.status != 'FINISHED'">{{ meeting.churchName }}</td>
+        <td *ngIf="meeting.status != 'FINISHED'">{{ meeting.churchRoom }}</td>
+        <td *ngIf="meeting.status != 'FINISHED'" class="text-center">
           <p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000"></p-confirmDialog>
-          <button type="button" (click)="openMeeting()" pButton icon="pi pi-check" label="Abrir" class="ui-button-info"
+          <button type="button" (click)="openMeeting(meeting.id, meeting)" pButton icon="pi pi-check" label="Abrir" class="ui-button-info"
             id="openMeeting"></button>
           <button type="button" (click)="cancelMeeting()" pButton icon="pi pi-times" label="Cancelar"
             class="ui-button-danger"></button>
@@ -35,5 +31,4 @@
       </tr>
     </tbody>
   </table>
-
 </div>

@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  apiUrlLocals: 'http://localhost:3000',
-  apiUrlAdministration: 'http://localhost:3100',
-  apiUrlUsers: 'http://localhost:3200'
+  apiUrlLocalsService: 'http://localhost:8090/api/v1/locals',
+  apiUrlMeetingService: 'http://localhost:8091/api/v1/meetings',
+  // apiUrlUsers: 'https://localhost:3200'
 };
 
 /*

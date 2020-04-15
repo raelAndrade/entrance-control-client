@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Locals } from 'src/app/models/locals';
-import { Administrations } from 'src/app/models/administration.model';
-import { LocalsService } from 'src/app/services/locals.service';
-import { AdmService } from 'src/app/services/adm.service';
+import { MeetingService } from 'src/app/services/meeting.service';
+
 import { Router } from '@angular/router';
+import { Meeting } from 'src/app/models/meeting.model';
 
 @Component({
   selector: 'app-schedule-list-church',
@@ -13,36 +12,36 @@ import { Router } from '@angular/router';
 })
 export class ScheduleListChurchComponent implements OnInit {
 
-  locals: Locals[] = [];
-  adm: any;
-  admin: Administrations[] = [];
-  filteredAdministration: any[];
+  meetings: Meeting[] = [];
+  meeting: any;
+  // filteredAdministration: any[];
 
   constructor(
-    private serviceLocals: LocalsService,
-    private service: AdmService,
+    private serviceMeetings: MeetingService,
     private router: Router) { }
 
-  filterAdministration(event) {
+  /* filterAdministration(event) {
     const query = event.query;
-    this.service.list().subscribe(data => {
+    this.serviceMeetings.list().subscribe(data => {
       this.filteredAdministration = this.filterAdmin(query, data);
     });
-  }
+  } */
 
-  filterAdmin(query, admin: any[]): any[] {
+ /*  filterAdmin(query, meetings: any[]): any[] {
     const filtered: any[] = [];
-    for (let i = 0; i < admin.length; i++) {
-      const adm = admin[i];
-      if (adm.name.toLowerCase().indexOf(query.toLowerCase()) === 0) {
-        filtered.push(adm);
+    for (let i = 0; i < meetings.length; i++) {
+      const meeting = meetings[i];
+      if (meeting.name.toLowerCase().indexOf(query.toLowerCase()) === 0) {
+        filtered.push(meeting);
       }
     }
     return filtered;
-  }
+  } */
 
   ngOnInit() {
-    this.serviceLocals.list().subscribe(dados => this.locals = dados);
+    this.serviceMeetings.list().subscribe(dados => {
+      this.meetings = dados
+    });    
   }
 
   registerMeeting() {

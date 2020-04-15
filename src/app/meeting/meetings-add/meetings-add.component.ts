@@ -3,8 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { SelectItem, MenuItem } from 'primeng/api';
 
 import { Saloes } from '../../models/saloes';
-import { AdmService } from '../../services/adm.service';
 import { Administrations } from '../../models/administration.model';
+import { MeetingService } from 'src/app/services/meeting.service';
+import { Meeting } from 'src/app/models/meeting.model';
 
 @Component({
   selector: 'app-meetings-add',
@@ -16,13 +17,13 @@ import { Administrations } from '../../models/administration.model';
 export class MeetingsAddComponent implements OnInit {
 
   saloes: Saloes[];
-  adm: any;
-  admin: Administrations[] = [];
-  filteredAdministration: any[];
+  meeting: any;
+  meetings: Meeting[] = [];
+  // filteredAdministration: any[];
 
   breadcrumb: MenuItem[];
 
-  constructor(private service: AdmService) {
+  constructor(private service: MeetingService) {
     this.saloes = [
       { name: 'Selecione o salão' },
       { name: 'Principal' },
@@ -31,7 +32,7 @@ export class MeetingsAddComponent implements OnInit {
     ];
   }
 
-  filterAdministration(event) {
+  /* filterAdministration(event) {
     const query = event.query;
     this.service.list().subscribe(data => {
       this.filteredAdministration = this.filterAdmin(query, data);
@@ -40,7 +41,6 @@ export class MeetingsAddComponent implements OnInit {
 
   filterAdmin(query, admin: any[]): any[] {
     const filtered: any[] = [];
-    // tslint:disable-next-line:prefer-for-of
     for (let i = 0; i < admin.length; i++) {
       const adm = admin[i];
       if (adm.name.toLowerCase().indexOf(query.toLowerCase()) === 0) {
@@ -48,7 +48,7 @@ export class MeetingsAddComponent implements OnInit {
       }
     }
     return filtered;
-  }
+  } */
 
 
   ngOnInit() { }

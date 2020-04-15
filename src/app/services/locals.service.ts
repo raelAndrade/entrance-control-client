@@ -12,7 +12,7 @@ export class LocalsService {
   constructor(private http: HttpClient) { }
 
   list() {
-    return this.http.get<Locals[]>(`${environment.apiUrlLocals}/locals`)
+    return this.http.get<Locals[]>(`${environment.apiUrlLocalsService}`)
       .pipe(tap(console.log));
   }
 }

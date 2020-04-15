@@ -7,7 +7,7 @@ export class Church {
   created: Date;
   updated: Date;
 
-  constructor() {
+  /* constructor() {
     this.created = new Date();
     this.updated = new Date();
   }
@@ -18,5 +18,5 @@ export class Church {
     this.description = description;
     this.created = new Date();
     this.updated = new Date();
-  }
+  } */
 }

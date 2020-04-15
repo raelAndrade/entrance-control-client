@@ -6,7 +6,7 @@ export class Administrations {
   created: Date;
   updated: Date;
 
-  constructor() {
+  /* constructor() {
     this.created = new Date();
     this.updated = new Date();
   }
@@ -16,5 +16,5 @@ export class Administrations {
     this.cnpj = cnpj;
     this.created = new Date();
     this.updated = new Date();
-  }
+  } */
 }

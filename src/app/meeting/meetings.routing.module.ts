@@ -24,7 +24,7 @@ const meetingsRoutes: Routes = [
     canLoad: [AuthGuard]
   },
   {
-    path: 'reuniao/autenticacao',
+    path: 'reuniao/autenticacao/:id',
     component: MeetingsAuthenticationComponent,
     canActivate: [AuthGuard],
     canActivateChild: [MeetingsGuard],

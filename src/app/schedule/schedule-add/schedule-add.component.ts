@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Administrations } from 'src/app/models/administration.model';
-import { AdmService } from 'src/app/services/adm.service';
+import { MeetingService } from 'src/app/services/meeting.service';
+
 
 @Component({
   selector: 'app-schedule-add',
@@ -15,7 +16,7 @@ export class ScheduleAddComponent implements OnInit {
   filteredAdministration: any[];
 
   constructor(
-    private service: AdmService) { }
+    private service: MeetingService) { }
 
   ngOnInit() {
   }
@@ -29,7 +30,6 @@ export class ScheduleAddComponent implements OnInit {
 
   filterAdmin(query, admin: any[]): any[] {
     const filtered: any[] = [];
-    // tslint:disable-next-line:prefer-for-of
     for (let i = 0; i < admin.length; i++) {
       const adm = admin[i];
       if (adm.name.toLowerCase().indexOf(query.toLowerCase()) === 0) {

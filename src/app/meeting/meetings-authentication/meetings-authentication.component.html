@@ -12,47 +12,43 @@
     <div class="ui-g">
       <div class="ui-g-6">
         <label for="StaticReuniao">Reunião: </label>
-        <span style="padding: 5px;">Reunião Ministerial</span>
+        <span style="padding: 5px;">{{ meeting.name }}</span>
       </div>
       <div class="ui-g-2">
         <label for="StaticDate">Data: </label>
-        <span style="padding: 5px;">08/02/2020</span>
+        <span style="padding: 5px;">{{ meeting.open | date:'dd/MM/yyyy' }}</span>
       </div>
       <div class="ui-g-2">
         <label for="StaticInicio">Início: </label>
-        <span style="padding: 5px;">10:00</span>
+        <span style="padding: 5px;">{{ meeting.open | date:'HH:mm' }}</span>
       </div>
       <div class="ui-g-2">
         <label for="StaticTermimo">Término: </label>
-        <span style="padding: 5px;">12:00</span>
+        <span style="padding: 5px;">{{ meeting.closeAt | date:'HH:mm' }}</span>
       </div>
     </div>
 
     <div class="ui-g">
       <div class="ui-g-6">
         <label for="StaticDescricao">Descrição: </label>
-        <span style="padding: 5px;">Reunião dos serviços Ministerial no vale do paraíba.</span>
-      </div>
-      <div class="ui-g-6">
-        <label for="StaticGrupos">Grupos: </label>
-        <span style="padding: 15px;">Ministerial</span>
+        <span style="padding: 5px;">{{ meeting.description }}</span>
       </div>
     </div>
 
     <div class="ui-g">
       <div class="ui-g-12">
         <label for="StaticStatus">Status: </label>
-        <span class="badge badge-pill badge-primary" style="margin-left: 10px;">Aberta</span>
-        <!-- <strong style="padding: 5px; color: red;">Aberta</strong> -->
+        <span class="badge badge-pill badge-primary" style="margin-left: 10px;" *ngIf="meeting.status != 'FINISHED'">{{ meeting.status }}</span>
+        <span class="badge badge-pill badge-danger" style="margin-left: 10px;" *ngIf="meeting.status == 'FINISHED'">{{ meeting.status }}</span>
       </div>
       <div class="ui-g-12">
         <label for="StaticUser">Usuário: </label>
-        Irmão<span style="padding: 5px;">Flávio</span>
+        Irmão<span style="padding: 5px;">{{ meeting.createdByUser }}</span>
       </div>
     </div>
   </p-panel>
 
-  <div class="ui-g ui-fluid">
+  <div class="ui-g ui-fluid" *ngIf="meeting.status != 'FINISHED'">
     <div class="ui-g-12">
       <label for="cordigo">Carteirinha: </label>
       <div class="ui-inputgroup">
@@ -74,29 +70,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="text-center">CCB001</td>
+          <tr *ngFor="let meeting of meeting.cardNumbers">
+            <td class="text-center">{{ meeting}}</td>
             <td class="text-center">Raimundo Luís Iago da Luz</td>
-            <td class="text-center">Ancião</td>
-          </tr>
-          <tr>
-            <td class="text-center">CCB201</td>
-            <td class="text-center">Danilo Moreira</td>
-            <td class="text-center">Ancião</td>
-          </tr>
-          <tr>
-            <td class="text-center">CCB301</td>
-            <td class="text-center">Bruno de Assis</td>
-            <td class="text-center">Ancião</td>
-          </tr>
-          <tr>
-            <td class="text-center">CCB401</td>
-            <td class="text-center">Cauê Pietro Peixoto</td>
-            <td class="text-center">Ancião</td>
-          </tr>
-          <tr>
-            <td class="text-center">CCB501</td>
-            <td class="text-center">Joaquim Bruno Cardoso</td>
             <td class="text-center">Ancião</td>
           </tr>
         </tbody>

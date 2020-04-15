@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { Message, ConfirmationService } from 'primeng/api';
-import { NgClass } from '@angular/common';
+
+import { MeetingService } from 'src/app/services/meeting.service';
+import { Meeting } from 'src/app/models/meeting.model';
+
 
 @Component({
   selector: 'app-schedule-list-meeting',
@@ -15,17 +20,26 @@ import { NgClass } from '@angular/common';
 })
 export class ScheduleListMeetingComponent implements OnInit {
 
+  meeting = new Meeting('', '', '', '', '', '', '', '', '', '', null, null, null, null, null, null, null);
   msgs: Message[] = [];
+  meetings: Meeting[] = [];
 
-  constructor(private confirmationService: ConfirmationService) { }
+  constructor(
+    private confirmationService: ConfirmationService,
+    private serviceMeetings: MeetingService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
+    this.serviceMeetings.list().subscribe(dados => {
+      this.meetings = dados
+    });
   }
 
-  openMeeting() {
+  openMeeting(id: string, meeting: Meeting): void {
     this.confirmationService.confirm({
-      message: 'Você deseja abrir a Reunião "X" ?',
-      header: 'Abrir Reunião "X"',
+      message: 'Você deseja abrir a ' + meeting.name + '?',
+      header: 'Abrir Reunião',
       icon: 'pi pi-exclamation-triangle',
       acceptLabel: 'Sim',
       rejectLabel: 'Não',
@@ -33,17 +47,21 @@ export class ScheduleListMeetingComponent implements OnInit {
         this.msgs = [
           {
             severity: 'info',
-            detail: 'Reunião "X" Aberta com sucesso!',
+            detail: 'Reunião Aberta com sucesso!',
           }
-        ];
+        ];        
+        this.serviceMeetings.changeStatusForOpened(id, this.meeting).subscribe((meeting: Meeting) => {
+          this.meeting = meeting;
+        });
         let buttonOpenMeeting = document.querySelector('.ui-button-info');
         buttonOpenMeeting.setAttribute("disabled", "disabled");
+        this.router.navigate(['/agendamento/listar']);
       },
       reject: () => {
         this.msgs = [
           {
             severity: 'info',
-            detail: 'Não foi possível abrir a Reunião "X".'
+            detail: 'Não foi possível abrir a ' + meeting.name + '.'
           }
         ];
       }

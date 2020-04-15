@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  apiUrlLocals: 'http://localhost:3000',
-  apiUrlAdministration: 'http://localhost:3100',
+  apiUrlLocalsService: 'http://localhost:8090/api/v1/',
+  apiUrlMeetingService: 'http://localhost:8091/api/v1/',
   apiUrlUsers: 'http://localhost:3200'
 };

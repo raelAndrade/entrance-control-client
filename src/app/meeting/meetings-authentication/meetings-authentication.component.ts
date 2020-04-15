@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import { MeetingService } from 'src/app/services/meeting.service';
+import { Meeting } from 'src/app/models/meeting.model';
+import { ActivatedRoute } from '@angular/router';
+
+import * as moment from 'moment';
+import 'moment/locale/pt-br';
 
 @Component({
   selector: 'app-meetings-authentication',
@@ -9,11 +15,27 @@ import html2canvas from 'html2canvas';
 })
 export class MeetingsAuthenticationComponent implements OnInit {
 
-  constructor() { }
+  meeting = new Meeting('', '', '', '', '', '', '', '', '', '', null, null, null, null, null, null, null);
+
+  constructor(
+     private serviceMeetings: MeetingService,
+     private route: ActivatedRoute
+  )  { }
 
   ngOnInit() {
-
+    let id: string = this.route.snapshot.params['id'];    
+    if (id != undefined) {
+      this.findById(id);
+    }
   }
+
+  findById(id: string){
+    this.serviceMeetings.findMeetingById(id).subscribe((meeting: Meeting) => {
+      this.meeting = meeting;
+    });    
+  }
+
+  
 
   gerarPDF() {
 

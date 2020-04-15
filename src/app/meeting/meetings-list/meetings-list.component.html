@@ -11,8 +11,6 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th></th>
-        <th class="text-center">Código</th>
         <th class="text-center">Data Inicial</th>
         <th class="text-center">Data Final</th>
         <th class="text-center">Igreja</th>
@@ -21,23 +19,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>
-          <p-checkbox></p-checkbox>
-        </td>
-        <td class="text-center">Reunião - 002</td>
-        <td class="text-center">08/02/2020</td>
-        <td class="text-center">08/02/2020</td>
-        <td class="text-center">Bairro da Cruz</td>
-        <td class="text-center">Piedade</td>
+      <tr *ngFor="let meeting of meetings">
+        <td class="text-center">{{ meeting.open | date:'dd/MM/yyyy'}}</td>
+        <td class="text-center">{{ meeting.closeAt | date:'dd/MM/yyyy'}}</td>
+        <td class="text-center">{{ meeting.churchName }}</td>
+        <td class="text-center">{{ meeting.churchRoom }}</td>
         <td class="text-center">
           <p-confirmDialog [style]="{width: '50vw'}" [baseZIndex]="10000"></p-confirmDialog>
-          <button type="button" (click)="closeMeeting()" pButton icon="pi pi-times" label="Fechar"
-            class="ui-button-success" id="openMeeting"></button>
-          <button type="button" (click)="accessMeeting()" pButton icon="pi pi-check" label="Acessar"
-            class="ui-button-infor"></button>
-          <!-- <button pButton type="button" label="Fechar" class="ui-button-success"></button>
-          <button pButton type="button" label="Acessar" class="ui-button-info" (click)="accessMeeting()"></button> -->
+          <button type="button" (click)="changeStatusClosed(meeting.id, meeting)" pButton icon="pi pi-times" label="Fechar"
+            class="ui-button-success" id="openMeeting" *ngIf="meeting.status != 'FINISHED'"></button>
+          <button type="button" class="btn btn-primary" (click)="accessMeeting(meeting.id)" *ngIf="meeting.status != 'IN_PROGRESS'">Acessar</button>
         </td>
       </tr>
     </tbody>
